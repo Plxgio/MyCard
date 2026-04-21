@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>/Plxgio/ (・_・;)</title>
+    <title>/Plxgio/ (・_・;)  </title>
+    <link rel="icon" type="image/jpeg" href="IMG/icon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <style>
         * {
             margin: 0;
@@ -14,22 +16,23 @@
         }
 
         body {
-            font-family: 'VT323', monospace;
+            font-family: 'Manrope', sans-serif;
             background-color: #000000;
             color: #e0e0e0;
             line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
-            letter-spacing: 1px;
+            letter-spacing: 0.2px;
             position: relative;
             padding-top: 60px;
         }
 
-        /* ── Particles ── */
         #particles-bg {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: -1;
             pointer-events: none;
         }
@@ -44,21 +47,31 @@
         }
 
         @keyframes floatParticle {
-            0%   { transform: translateY(100vh) rotate(0deg);   opacity: 0; }
-            10%  { opacity: 0.8; }
-            90%  { opacity: 0.8; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
         }
 
-        .symbol-1::before  { content: '{'; }
-        .symbol-2::before  { content: '}'; }
-        .symbol-3::before  { content: '<'; }
-        .symbol-4::before  { content: '>'; }
-        .symbol-5::before  { content: '/'; }
-        .symbol-6::before  { content: ';'; }
-        .symbol-7::before  { content: '('; }
-        .symbol-8::before  { content: ')'; }
-        .symbol-9::before  { content: '['; }
+        .symbol-1::before { content: '{'; }
+        .symbol-2::before { content: '}'; }
+        .symbol-3::before { content: '<'; }
+        .symbol-4::before { content: '>'; }
+        .symbol-5::before { content: '/'; }
+        .symbol-6::before { content: ';'; }
+        .symbol-7::before { content: '('; }
+        .symbol-8::before { content: ')'; }
+        .symbol-9::before { content: '['; }
         .symbol-10::before { content: ']'; }
         .symbol-11::before { content: '='; }
         .symbol-12::before { content: '+'; }
@@ -69,10 +82,11 @@
         .symbol-17::before { content: '@'; }
         .symbol-18::before { content: '~'; }
 
-        /* ── Music Player ── */
         .music-player-minimal {
             position: fixed;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             background: rgba(0, 0, 0, 0.9);
             padding: 10px 20px;
             display: flex;
@@ -85,8 +99,13 @@
             height: 60px;
         }
 
-        .music-player-minimal.hidden  { transform: translateY(-100%); }
-        .music-player-minimal.visible { transform: translateY(0); }
+        .music-player-minimal.hidden {
+            transform: translateY(-100%);
+        }
+
+        .music-player-minimal.visible {
+            transform: translateY(0);
+        }
 
         .minimal-controls {
             display: flex;
@@ -103,19 +122,34 @@
             cursor: pointer;
             transition: color 0.3s ease;
             padding: 5px;
-            width: 36px; height: 36px;
+            width: 36px;
+            height: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
         }
 
-        .music-btn-minimal:hover { color: #4dabf7; background: rgba(77,171,247,0.1); }
+        .music-btn-minimal:hover {
+            color: #4dabf7;
+            background: rgba(77, 171, 247, 0.1);
+        }
 
-        .music-btn-minimal.play-btn { color: #4dabf7; font-size: 1.3rem; }
-        .music-btn-minimal.play-btn:hover { color: #fff; background: rgba(77,171,247,0.2); }
+        .music-btn-minimal.play-btn {
+            color: #4dabf7;
+            font-size: 1.3rem;
+        }
 
-        .music-info-minimal { flex: 2; text-align: center; overflow: hidden; }
+        .music-btn-minimal.play-btn:hover {
+            color: #fff;
+            background: rgba(77, 171, 247, 0.2);
+        }
+
+        .music-info-minimal {
+            flex: 2;
+            text-align: center;
+            overflow: hidden;
+        }
 
         .music-title-minimal {
             color: #4dabf7;
@@ -135,7 +169,7 @@
         .progress-bar-minimal {
             flex: 1;
             height: 2px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 1px;
             overflow: hidden;
             cursor: pointer;
@@ -148,7 +182,11 @@
             transition: width 0.1s linear;
         }
 
-        .time-minimal { font-size: 0.8rem; color: #666; min-width: 35px; }
+        .time-minimal {
+            font-size: 0.8rem;
+            color: #666;
+            min-width: 35px;
+        }
 
         .volume-control-minimal {
             display: flex;
@@ -162,197 +200,988 @@
             width: 60px;
             -webkit-appearance: none;
             height: 2px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 1px;
             outline: none;
         }
 
         .volume-slider-minimal::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 8px; height: 8px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             background: #4dabf7;
             cursor: pointer;
         }
 
-        /* ── Main Stage ── */
-        .stage {
-            min-height: calc(100vh - 60px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             position: relative;
             z-index: 1;
         }
 
-        .profile-pic {
-            width: 90px; height: 90px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 32px;
-            border: 2px solid rgba(77,171,247,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-pic:hover { transform: scale(1.05); }
-
-        .profile-pic img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-        }
-
-        .logo-name {
-            font-size: 3.5rem;
-            color: #fff;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .logo-name span {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.6s forwards;
-        }
-
-        .logo-name span:nth-child(1) { animation-delay: 0.1s; }
-        .logo-name span:nth-child(2) { animation-delay: 0.2s; }
-        .logo-name span:nth-child(3) { animation-delay: 0.3s; }
-        .logo-name span:nth-child(4) { animation-delay: 0.4s; }
-        .logo-name span:nth-child(5) { animation-delay: 0.5s; }
-        .logo-name span:nth-child(6) { animation-delay: 0.6s; }
-
-        @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ── Rework block ── */
-        .rework-box {
-            margin-top: 48px;
-            border: 1px solid rgba(77,171,247,0.35);
-            background: rgba(77,171,247,0.04);
-            padding: 36px 48px;
-            max-width: 560px;
+        header {
+            padding: 40px 0 20px;
             position: relative;
-            animation: boxFadeIn 0.8s 0.9s both;
+            z-index: 10;
         }
 
-        @keyframes boxFadeIn {
-            from { opacity: 0; transform: translateY(16px); }
-            to   { opacity: 1; transform: translateY(0); }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .rework-box::before,
-        .rework-box::after {
-            content: '';
-            position: absolute;
-            width: 10px; height: 10px;
-            border-color: #4dabf7;
-            border-style: solid;
+        .logo {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
         }
 
-        .rework-box::before {
-            top: -2px; left: -2px;
-            border-width: 2px 0 0 2px;
-        }
-
-        .rework-box::after {
-            bottom: -2px; right: -2px;
-            border-width: 0 2px 2px 0;
-        }
-
-        .corner-tr, .corner-bl {
-            position: absolute;
-            width: 10px; height: 10px;
-            border-color: #4dabf7;
-            border-style: solid;
-        }
-
-        .corner-tr { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
-        .corner-bl { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
-
-        .rework-label {
-            font-size: 0.75rem;
-            color: #4dabf7;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 16px;
+        .logo:hover {
             opacity: 0.7;
         }
 
-        .rework-label::before { content: '> '; }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
 
-        .rework-title {
-            font-family: 'Press Start 2P', monospace;
-            font-size: 1.1rem;
+        .nav-link {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: none;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #a0a0a0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4dabf7;
+            transition: none;
+            display: none;
+        }
+
+        .nav-link:hover::after {
+            width: 0;
+        }
+
+        .hero {
+            padding: 52px 0 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-banner-wrap {
+            position: relative;
+            width: min(100%, 760px);
+        }
+
+        .hero-banner {
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 18px;
+            border: 1px solid rgba(77, 171, 247, 0.18);
+            background: rgba(255, 255, 255, 0.02);
+            position: relative;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.5) 100%);
+            pointer-events: none;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-meta {
+            position: absolute;
+            left: 10px;
+            top: calc(100% + 8px);
+            width: auto;
+            padding-left: 6px;
+            margin: 0;
+            color: #6b96bd;
+            font-size: 0.68rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .profile-icon-container {
+            width: 164px;
+            height: 164px;
+            z-index: 2;
+            margin-top: -82px;
+        }
+
+        .profile-icon {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 4px solid #000000;
+            box-shadow: none;
+            background: #111111;
+        }
+
+        .profile-icon:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 18px;
+        }
+
+        .greeting {
+            display: none;
+            color: #8a8a8a;
+            margin-bottom: 14px;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .greeting::before {
+            display: none;
+        }
+
+        .name {
+            font-size: 4rem;
+            font-weight: 800;
             color: #fff;
-            line-height: 1.8;
+            line-height: 1.1;
+            margin-bottom: 14px;
+            letter-spacing: 0.04em;
+            text-transform: none;
+        }
+
+        .tagline {
+            font-size: 1.15rem;
+            color: #8a8a8a;
+            margin-bottom: 0;
+            line-height: 1.5;
+            max-width: 620px;
+        }
+
+        .about-section {
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .graffiti-stamp {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.4;
+            filter: sepia(0.3) saturate(1.5);
+            pointer-events: none;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .graffiti-stamp.bottom-right {
+            bottom: 20px;
+            right: 20px;
+            transform: rotate(5deg);
+        }
+
+        .graffiti-stamp.top-left {
+            top: 20px;
+            left: 20px;
+            transform: rotate(-8deg);
+        }
+
+        .graffiti-stamp img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .about-text {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            line-height: 1.6;
             margin-bottom: 20px;
         }
 
-        .rework-title .blink {
-            animation: blink 1.2s step-end infinite;
+        .projects-carousel-section {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50%       { opacity: 0; }
+        .carousel-title {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 50px;
+            text-align: center;
+            text-transform: uppercase;
         }
 
-        .rework-sub {
-            font-size: 1.1rem;
-            color: #666;
-            margin-top: 4px;
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: visible;
+            padding: 0;
         }
 
-        .rework-sub span { color: #4dabf7; }
-
-        /* ── Socials ── */
-        .socials {
-            display: flex;
+        .carousel-track {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 24px;
-            margin-top: 40px;
-            animation: boxFadeIn 0.8s 1.2s both;
+            width: 100%;
+            animation: none;
         }
 
-        .social-link {
-            color: #555;
+        .project-slide {
+            min-width: 0;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 10px;
+            padding: 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .project-status {
+            align-self: flex-start;
+            margin-bottom: 12px;
+            padding: 4px 9px;
+            border-radius: 999px;
+            border: 1px solid rgba(77, 171, 247, 0.2);
+            background: rgba(77, 171, 247, 0.08);
+            color: #86b8da;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .slide-title {
             font-size: 1.3rem;
-            text-decoration: none;
-            transition: color 0.3s, transform 0.3s;
+            color: #fff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            min-height: 3.6em;
+            line-height: 1.2;
+            display: flex;
+            align-items: flex-start;
         }
 
-        .social-link:hover { color: #4dabf7; transform: translateY(-3px); }
+        .slide-description {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            line-height: 1.5;
+            height: 4.5em;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
 
-        /* ── Responsive ── */
+        .slide-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: auto;
+        }
+
+        .project-slide--centered {
+            grid-column: 2 / span 2;
+            max-width: 430px;
+            justify-self: center;
+            width: 100%;
+        }
+
+        .project-slide:hover {
+            transform: translateY(-10px);
+            border-color: #4dabf7;
+        }
+
+        .slide-tag {
+            background: rgba(77, 171, 247, 0.1);
+            color: #4dabf7;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(77, 171, 247, 0.3);
+        }
+
+        .project-details-section {
+            padding: 80px 0;
+            display: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-details-section.active {
+            display: block;
+        }
+
+        .project-details {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(20, 20, 20, 0.95);
+            border-radius: 10px;
+            padding: 40px;
+            border: 2px solid #4dabf7;
+            animation: fadeIn 0.5s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .details-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .details-title {
+            font-size: 2rem;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #4dabf7;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+        .details-content {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .details-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .details-link {
+            color: #4dabf7;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .details-link:hover {
+            color: #fff;
+        }
+
+        .skills-section {
+            padding: 80px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .skills-title {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 50px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .skills-stack {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skill-category {
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 10px;
+            padding: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: none;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-category:hover {
+            transform: none;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            color: #4dabf7;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-title i {
+            font-size: 1.3rem;
+        }
+
+        .skill-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .skill-item:hover {
+            background: rgba(77, 171, 247, 0.1);
+            transform: translateX(5px);
+        }
+
+        .skill-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .skill-icon.devicon {
+            font-size: 1.5rem;
+        }
+
+        .skill-name {
+            flex-grow: 1;
+        }
+
+        .devicon-csharp-plain { color: #178600; }
+        .devicon-python-plain { color: #3572A5; }
+        .devicon-javascript-plain { color: #f7df1e; }
+        .devicon-typescript-plain { color: #3178c6; }
+        .devicon-html5-plain { color: #e34c26; }
+        .devicon-css3-plain { color: #264de4; }
+        .devicon-unity-original { color: #ffffff; }
+        .devicon-godot-plain { color: #478cbf; }
+        .devicon-react-original { color: #61dafb; }
+        .devicon-nodejs-plain { color: #339933; }
+        .devicon-vuejs-plain { color: #41b883; }
+        .devicon-threejs-original { color: #049ef4; }
+        .devicon-git-plain { color: #f1502f; }
+        .devicon-docker-plain { color: #2496ed; }
+        .devicon-visualstudio-plain { color: #5c2d91; }
+        .devicon-vscode-plain { color: #007acc; }
+        .devicon-blender-original { color: #f5792a; }
+        .devicon-trello-plain { color: #0079bf; }
+        .devicon-apache-plain { color: #d22128; }
+        .devicon-maven-plain { color: #c71a36; }
+        .devicon-amazonwebservices-plain { color: #ff9900; }
+        .devicon-mysql-plain { color: #4479a1; }
+        .devicon-github-original { color: #ffffff; }
+        .devicon-firebase-plain { color: #ffca28; }
+        .devicon-cloudflare-plain { color: #f38020; }
+        .devicon-rust-plain { color: #000000; }
+        .devicon-java-plain { color: #007396; }
+
+        footer {
+            padding: 60px 0 40px;
+            border-top: 2px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .contact-link {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-link:hover {
+            color: #4dabf7;
+        }
+
+        .contact-link i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .name span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s forwards;
+        }
+
+        .name span:nth-child(1) { animation-delay: 0.1s; }
+        .name span:nth-child(2) { animation-delay: 0.2s; }
+        .name span:nth-child(3) { animation-delay: 0.3s; }
+        .name span:nth-child(4) { animation-delay: 0.4s; }
+        .name span:nth-child(5) { animation-delay: 0.5s; }
+        .name span:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body.light-theme {
+            background-color: #f2f5f9;
+            color: #1d2430;
+        }
+
+        body.light-theme .music-player-minimal {
+            background: rgba(248, 250, 253, 0.94);
+            border-bottom-color: rgba(77, 171, 247, 0.18);
+        }
+
+        body.light-theme .music-btn-minimal {
+            color: #596979;
+        }
+
+        body.light-theme .music-btn-minimal:hover {
+            color: #24597f;
+            background: rgba(77, 171, 247, 0.1);
+        }
+
+        body.light-theme .music-btn-minimal.play-btn,
+        body.light-theme .music-title-minimal {
+            color: #2f6d98;
+        }
+
+        body.light-theme .progress-bar-minimal,
+        body.light-theme .volume-slider-minimal {
+            background: rgba(18, 29, 41, 0.12);
+        }
+
+        body.light-theme .time-minimal {
+            color: #768395;
+        }
+
+        body.light-theme .top-action-btn {
+            background: rgba(255, 255, 255, 0.88);
+            color: #21303b;
+            border-color: rgba(77, 171, 247, 0.22);
+        }
+
+        body.light-theme .top-action-btn:hover {
+            background: rgba(77, 171, 247, 0.12);
+            color: #16384d;
+        }
+
+        body.light-theme .logo,
+        body.light-theme .name,
+        body.light-theme .about-title,
+        body.light-theme .carousel-title,
+        body.light-theme .skills-title,
+        body.light-theme .details-title {
+            color: #141b22;
+        }
+
+        body.light-theme .nav-link,
+        body.light-theme .greeting,
+        body.light-theme .tagline,
+        body.light-theme .about-text,
+        body.light-theme .slide-description,
+        body.light-theme .details-content,
+        body.light-theme .skill-item,
+        body.light-theme .contact-link,
+        body.light-theme .copyright {
+            color: #566577;
+        }
+
+        body.light-theme .hero-banner {
+            background: rgba(255, 255, 255, 0.75);
+            border-color: rgba(77, 171, 247, 0.18);
+        }
+
+        body.light-theme .hero-meta,
+        body.light-theme .titles-toggle {
+            color: #3f79a3;
+        }
+
+        body.light-theme .profile-icon {
+            border-color: #f2f5f9;
+            background: #e5ebf2;
+        }
+
+        body.light-theme .project-slide,
+        body.light-theme .project-details,
+        body.light-theme .skill-category {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(20, 31, 41, 0.08);
+            box-shadow: none;
+        }
+
+        body.light-theme .project-slide:hover,
+        body.light-theme .skill-category:hover {
+            border-color: rgba(77, 171, 247, 0.45);
+        }
+
+        body.light-theme .slide-title,
+        body.light-theme .category-title {
+            color: #24597f;
+        }
+
+        body.light-theme .skill-item {
+            background: rgba(20, 31, 41, 0.03);
+        }
+
+        body.light-theme .skill-item:hover {
+            background: rgba(77, 171, 247, 0.12);
+        }
+
+        body.light-theme .floating-title {
+            background: rgba(255, 255, 255, 0.78);
+            border-color: rgba(77, 171, 247, 0.16);
+            color: #45647d;
+        }
+
+        body.light-theme .slide-tag {
+            background: rgba(77, 171, 247, 0.1);
+            color: #24597f;
+            border-color: rgba(77, 171, 247, 0.24);
+        }
+
+        body.light-theme footer {
+            border-top-color: rgba(20, 31, 41, 0.08);
+        }
+
+        body.light-theme .contact-link:hover,
+        body.light-theme .details-link:hover,
+        body.light-theme .close-btn:hover {
+            color: #141b22;
+        }
+
+        @media (max-width: 1100px) {
+            .hero-banner {
+                height: 210px;
+            }
+
+            .hero-banner-wrap {
+                width: 100%;
+            }
+
+            .profile-icon-container {
+                position: relative;
+                width: 144px;
+                height: 144px;
+                margin: -72px auto 0;
+            }
+
+            .hero-meta {
+                left: 8px;
+                top: calc(100% + 6px);
+            }
+            
+            .hero-text {
+                text-align: center;
+            }
+
+            .carousel-track {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .project-slide--centered {
+                grid-column: auto;
+                max-width: none;
+                justify-self: stretch;
+            }
+            
+            .graffiti-stamp {
+                max-width: 150px;
+                opacity: 0.3;
+            }
+            
+            .graffiti-stamp.bottom-right {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .graffiti-stamp.top-left {
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 180px;
+            }
+
+            .hero-meta {
+                font-size: 0.64rem;
+            }
+
+            .music-player-minimal {
+                height: 50px;
+                padding: 8px 15px;
+            }
+            
+            .music-btn-minimal {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+            
+            .music-title-minimal {
+                font-size: 0.8rem;
+            }
+            
+            .time-minimal {
+                font-size: 0.7rem;
+                min-width: 30px;
+            }
+            
+            .volume-slider-minimal {
+                width: 40px;
+            }
+            
+            .name {
+                font-size: 3.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.05rem;
+            }
+            
+            .about-title, .carousel-title, .skills-title {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .project-slide {
+                min-width: 0;
+            }
+            
+            .skill-list {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-track {
+                grid-template-columns: 1fr;
+            }
+            
+            .graffiti-stamp {
+                display: none;
+            }
+        }
+
         @media (max-width: 600px) {
-            .music-player-minimal { flex-wrap: wrap; height: auto; padding: 10px; }
-            .minimal-controls     { order: 1; width: 100%; justify-content: center; margin-bottom: 8px; }
-            .music-info-minimal   { order: 2; width: 100%; margin-bottom: 8px; }
-            .music-progress-minimal { order: 3; width: 100%; }
-            .volume-control-minimal { order: 4; width: 100%; justify-content: center; margin-top: 8px; }
-            .rework-box { padding: 28px 24px; }
-            .rework-title { font-size: 0.85rem; }
-            .logo-name { font-size: 2.5rem; }
+            .top-actions {
+                top: 104px;
+                left: 10px;
+                justify-content: flex-start;
+            }
+
+            .music-player-minimal {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 10px;
+            }
+            
+            .minimal-controls {
+                order: 1;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 8px;
+            }
+            
+            .music-info-minimal {
+                order: 2;
+                width: 100%;
+                margin-bottom: 8px;
+            }
+            
+            .music-progress-minimal {
+                order: 3;
+                width: 100%;
+            }
+            
+            .volume-control-minimal {
+                order: 4;
+                width: 100%;
+                justify-content: center;
+                margin-top: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 80px;
+            }
+
+            .top-actions {
+                gap: 8px;
+            }
+
+            .top-action-btn {
+                width: 40px;
+                min-width: 40px;
+                font-size: 0.88rem;
+            }
+            
+            .hero-banner {
+                height: 145px;
+                border-radius: 14px;
+            }
+            
+            .profile-icon-container {
+                width: 120px;
+                height: 120px;
+                margin-top: -60px;
+            }
+            
+            .name {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 0.98rem;
+            }
+            
+            .about-title, .carousel-title, .skills-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .project-slide {
+                min-width: 0;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Music Player -->
     <div class="music-player-minimal visible" id="musicPlayerMinimal">
         <div class="minimal-controls">
-            <button class="music-btn-minimal" id="prevBtnMinimal"><i class="fas fa-step-backward"></i></button>
-            <button class="music-btn-minimal play-btn" id="playBtnMinimal"><i class="fas fa-play" id="playIconMinimal"></i></button>
-            <button class="music-btn-minimal" id="nextBtnMinimal"><i class="fas fa-step-forward"></i></button>
+            <button class="music-btn-minimal prev-btn" id="prevBtnMinimal">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="music-btn-minimal play-btn" id="playBtnMinimal">
+                <i class="fas fa-play" id="playIconMinimal"></i>
+            </button>
+            <button class="music-btn-minimal next-btn" id="nextBtnMinimal">
+                <i class="fas fa-step-forward"></i>
+            </button>
         </div>
+        
         <div class="music-info-minimal">
             <div class="music-title-minimal" id="musicTitleMinimal">Cargando música...</div>
         </div>
+        
         <div class="music-progress-minimal">
             <span class="time-minimal" id="currentTimeMinimal">0:00</span>
             <div class="progress-bar-minimal" id="progressBarMinimal">
@@ -360,228 +1189,1305 @@
             </div>
             <span class="time-minimal" id="totalTimeMinimal">0:00</span>
         </div>
+        
         <div class="volume-control-minimal">
-            <button class="music-btn-minimal" id="volumeBtnMinimal"><i class="fas fa-volume-up" id="volumeIconMinimal"></i></button>
+            <button class="music-btn-minimal volume-btn" id="volumeBtnMinimal">
+                <i class="fas fa-volume-up" id="volumeIconMinimal"></i>
+            </button>
             <input type="range" class="volume-slider-minimal" id="volumeSliderMinimal" min="0" max="1" step="0.1" value="0.1">
         </div>
     </div>
 
-    <!-- Particles -->
+
+
     <div id="particles-bg"></div>
 
-    <!-- Main Content -->
-    <div class="stage">
-        <div class="profile-pic">
-            <img src="https://i.imgur.com/SyCRJhg.jpeg" alt="Plxgio">
-        </div>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#" class="logo"></a>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">about me</a>
+                    <a href="#projects" class="nav-link">projects</a>
+                    <a href="#skills" class="nav-link">skills</a>
+                </div>
+            </nav>
+        </header>
 
-        <div class="logo-name">
-            <span>P</span><span>l</span><span>x</span><span>g</span><span>i</span><span>o</span>
-        </div>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-banner-wrap">
+                    <div class="hero-banner">
+                        <img src="IMG/banner.gif" alt="Banner de Plxgio">
+                    </div>
+                    <div class="hero-meta" id="heroMeta">Argentina | --:--</div>
+                </div>
 
-        <div class="rework-box">
-            <div class="corner-tr"></div>
-            <div class="corner-bl"></div>
-
-            <div class="rework-label">status</div>
-            <div class="rework-title">
-                under rework<span class="blink">_</span>
+                <div class="profile-icon-container">
+                    <div class="profile-icon">
+                        <img src="IMG/icon.jpg" alt="Plxgio Icon">
+                    </div>
+                </div>
+                
+                <div class="hero-text">
+                    <div class="greeting">Start.</div>
+                    <h1 class="name">
+                        <span>P</span><span>l</span><span>x</span><span>g</span><span>i</span><span>o</span>
+                    </h1>
+                    <div class="tagline">Bullshit developer / gamedev. / 3D/2D maker / webdev</div>
+                </div>
             </div>
-            <div class="rework-sub">
-                la página se está reconstruyendo.<br>
-                volvé en <span>un rato</span>.
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="graffiti-stamp bottom-right">
+                <img src="https://i.imgur.com/mxoW6Vm.png" alt="Edgerunnerlogo">
+            </div>
+            
+            <div class="about-content">
+                <h2 class="about-title">About Me</h2>
+                <p class="about-text">
+                    Self-taught programmer, I like videogames — enough to start making my own (mostly trash). 
+                    I focus on development in Unity and Godot, but I also like other areas of software.
+                </p>
+                <p class="about-text">
+                    As a hobby, I love making scripts that are usefully useless and other weird stuff. 
+                    Cybersecurity catches my attention, so every now and then I end up compromising some 
+                    of my own systems just for fun.
+                </p>
+                <p class="about-text">
+                    On the other hand, I'm a total fangirl of CD Projekt Red and Kojima.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-carousel-section">
+            <h2 class="carousel-title">🧩 Projects</h2>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack"></div>
+            </div>
+        </section>
+
+        <div id="project1-details" class="project-details-section">
+            <div class="project-details">
+                <div class="details-header">
+                    <h3 class="details-title">Alderfall Valley</h3>
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="details-content">
+                    <p>Pixel-art style RPG with deep lore where every choice affects the story, featuring NPCs with complex personalities and challenging combat.</p>
+                    <p><strong>Features:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Power system with skill trees</li>
+                        <li>Complex NPC relationship system</li>
+                        <li>Multiplayer co-op mode</li>
+                        <li>Advanced enemy AI with behaviors</li>
+                        <li>Branching narrative with meaningful choices</li>
+                        <li>Cloud save system</li>
+                    </ul>
+                </div>
+                <div class="details-links">
+                    <a href="https://plxgio.itch.io/alderfall-valley" target="_blank" class="details-link">
+                        <i class="fab fa-itch-io"></i> View on Itch.io
+                    </a>
+                    <a href="#" class="details-link">
+                        <i class="fas fa-gamepad"></i> Demo not available
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="socials">
-            <a href="https://github.com/Plxgio" target="_blank" class="social-link" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://x.com/Plxgio" target="_blank" class="social-link" title="X / Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://plxgio.itch.io/" target="_blank" class="social-link" title="Itch.io">
-                <i class="fas fa-gamepad"></i>
-            </a>
+        <div id="project2-details" class="project-details-section">
+            <div class="project-details">
+                <div class="details-header">
+                    <h3 class="details-title">Life Gestor</h3>
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="details-content">
+                    <p>Local application to manage schedules, finances, and personal information with privacy focus.</p>
+                    <p><strong>Features:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Calendar with event management</li>
+                        <li>Expense tracking and budgeting</li>
+                        <li>Contact and note management</li>
+                        <li>Task automation with scripts</li>
+                        <li>Local data storage (no cloud)</li>
+                        <li>Customizable dashboard</li>
+                        <li>Data encryption</li>
+                    </ul>
+                </div>
+                <div class="details-links">
+                    <a href="https://github.com/Plxgio/life-gestor" target="_blank" class="details-link">
+                        <i class="fab fa-github"></i> Not yet available
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <div id="project3-details" class="project-details-section">
+            <div class="project-details">
+                <div class="details-header">
+                    <h3 class="details-title">Unity Game Lab</h3>
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="details-content">
+                    <p>Experimental project to explore Unity's maximum potential through optimization techniques and advanced features.</p>
+                    <p><strong>Features:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Performance optimization tests</li>
+                        <li>Advanced shader implementations</li>
+                        <li>Custom physics systems</li>
+                        <li>Procedural generation experiments</li>
+                        <li>AI behavior trees</li>
+                        <li>Memory management techniques</li>
+                        <li>Multi-threading implementations</li>
+                    </ul>
+                </div>
+                <div class="details-links">
+                    <a href="https://github.com/Plxgio/unity-game-lab" target="_blank" class="details-link">
+                        <i class="fab fa-github"></i> Not yet available
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="project4-details" class="project-details-section">
+            <div class="project-details">
+                <div class="details-header">
+                    <h3 class="details-title">Trolitas Boom</h3>
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="details-content">
+                    <p>Herramienta privada para control de estres en servidores y pruebas internas orientadas a comportamiento bajo carga.</p>
+                    <p><strong>Caracteristicas:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Escenarios de estres para servidores dedicados</li>
+                        <li>Pruebas de respuestas ante picos de trafico</li>
+                        <li>Utilidades internas para detectar cuellos de botella</li>
+                        <li>Monitoreo de estabilidad durante cargas prolongadas</li>
+                        <li>Suite pensada para entornos privados y laboratorio</li>
+                    </ul>
+                </div>
+                <div class="details-links">
+                    <a href="#" class="details-link">
+                        <i class="fab fa-github"></i> Not yet available
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="project5-details" class="project-details-section">
+            <div class="project-details">
+                <div class="details-header">
+                    <h3 class="details-title">Minecraft Server Plugins</h3>
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="details-content">
+                    <p>Collection of optimization and utility plugins for Minecraft servers, focused on performance improvement and administrative tools.</p>
+                    <p><strong>Features:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Server performance optimization</li>
+                        <li>Anti-griefing and protection systems</li>
+                        <li>Custom economy plugins</li>
+                        <li>Player management tools</li>
+                        <li>World management utilities</li>
+                        <li>Automated backup systems</li>
+                        <li>Custom mini-games</li>
+                    </ul>
+                </div>
+                <div class="details-links">
+                    <a href="https://github.com/Plxgio/minecraft-plugins" target="_blank" class="details-link">
+                        <i class="fab fa-github"></i> Not yet available
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section id="skills" class="skills-section">
+            <h2 class="skills-title">Skills</h2>
+            <div class="skills-stack">
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-code"></i> Languages</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-csharp-plain"></i>
+                            </div>
+                            <span class="skill-name">C#</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-godot-plain"></i>
+                            </div>
+                            <span class="skill-name">GDScript</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-python-plain"></i>
+                            </div>
+                            <span class="skill-name">Python</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-javascript-plain"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-typescript-plain"></i>
+                            </div>
+                            <span class="skill-name">TypeScript</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-html5-plain"></i>
+                            </div>
+                            <span class="skill-name">HTML</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-css3-plain"></i>
+                            </div>
+                            <span class="skill-name">CSS</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-shapes"></i>
+                            </div>
+                            <span class="skill-name">GLSL</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-java-plain"></i>
+                            </div>
+                            <span class="skill-name">Java</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="skill-name">C++</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-rust-plain"></i>
+                            </div>
+                            <span class="skill-name">Rust</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-cubes"></i> Frameworks & Libraries</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-unity-original"></i>
+                            </div>
+                            <span class="skill-name">Unity</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-godot-plain"></i>
+                            </div>
+                            <span class="skill-name">Godot</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-react-original"></i>
+                            </div>
+                            <span class="skill-name">React</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-nodejs-plain"></i>
+                            </div>
+                            <span class="skill-name">Node.js</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <span class="skill-name">Express</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-vuejs-plain"></i>
+                            </div>
+                            <span class="skill-name">Vue.js</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-threejs-original"></i>
+                            </div>
+                            <span class="skill-name">Three.js</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-tools"></i> Tools</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-git-plain"></i>
+                            </div>
+                            <span class="skill-name">Git</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-docker-plain"></i>
+                            </div>
+                            <span class="skill-name">Docker</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-visualstudio-plain"></i>
+                            </div>
+                            <span class="skill-name">Visual Studio</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-vscode-plain"></i>
+                            </div>
+                            <span class="skill-name">VS Code</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-blender-original"></i>
+                            </div>
+                            <span class="skill-name">Blender</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <span class="skill-name">Aseprite</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-trello-plain"></i>
+                            </div>
+                            <span class="skill-name">Trello</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-apache-plain"></i>
+                            </div>
+                            <span class="skill-name">Apache</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-maven-plain"></i>
+                            </div>
+                            <span class="skill-name">Apache Maven</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-cloud"></i> Cloud & Providers</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-amazonwebservices-plain"></i>
+                            </div>
+                            <span class="skill-name">AWS</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-mysql-plain"></i>
+                            </div>
+                            <span class="skill-name">MySQL</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-github-original"></i>
+                            </div>
+                            <span class="skill-name">GitHub</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-github-original"></i>
+                            </div>
+                            <span class="skill-name">GitHub Pages</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-cloudflare-plain"></i>
+                            </div>
+                            <span class="skill-name">Cloudflare</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-firebase-plain"></i>
+                            </div>
+                            <span class="skill-name">Firebase</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-graduation-cap"></i> Currently Learning</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-threejs-original"></i>
+                            </div>
+                            <span class="skill-name">Three.js (Advanced)</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <span class="skill-name">DevOps</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <span class="skill-name">Game Networking</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <span class="skill-name">WebAssembly</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="contact-links">
+                <a href="https://github.com/Plxgio" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://x.com/Plxgio" target="_blank" class="contact-link">
+                    <i class="fab fa-twitter"></i> X
+                </a>
+                <a href="https://plxgio.itch.io/" target="_blank" class="contact-link">
+                    <i class="fas fa-gamepad"></i> Itch.io
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; <span id="current-year">2024</span> Plxgio.  | From Argentina, with love.
+            </div>
+        </footer>
     </div>
 
-    <audio id="backgroundMusic" preload="auto">
-        Tu navegador no soporta audio.
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="https://assets.codepen.io/1468070/Lofi-Study-Music.mp3" type="audio/mpeg">
+        <source src="https://assets.codepen.io/1468070/Lofi-Study-Music.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento de audio.
     </audio>
 
     <script>
-        // ── Particles ──
-        (function createParticles() {
-            const bg = document.getElementById('particles-bg');
-            for (let i = 0; i < 30; i++) {
-                const p = document.createElement('div');
-                const sym = Math.floor(Math.random() * 18) + 1;
-                p.className = `particle symbol-${sym}`;
-                p.style.left = `${Math.random() * 100}%`;
-                p.style.fontSize = `${Math.random() * 20 + 15}px`;
-                const blue = Math.floor(Math.random() * 50) + 150;
-                const op = (Math.random() * 0.2 + 0.1).toFixed(2);
-                p.style.color = `rgba(77, ${blue}, 247, ${op})`;
-                p.style.animationDuration = `${Math.random() * 15 + 20}s`;
-                p.style.animationDelay    = `${Math.random() * 15}s`;
-                bg.appendChild(p);
-            }
-        })();
-
-        // ── Music Player ──
-        const audio        = document.getElementById('backgroundMusic');
-        const playBtn      = document.getElementById('playBtnMinimal');
-        const playIcon     = document.getElementById('playIconMinimal');
-        const prevBtn      = document.getElementById('prevBtnMinimal');
-        const nextBtn      = document.getElementById('nextBtnMinimal');
-        const volumeBtn    = document.getElementById('volumeBtnMinimal');
-        const volumeIcon   = document.getElementById('volumeIconMinimal');
+        const audioPlayer = document.getElementById('backgroundMusic');
+        const playBtn = document.getElementById('playBtnMinimal');
+        const playIcon = document.getElementById('playIconMinimal');
+        const prevBtn = document.getElementById('prevBtnMinimal');
+        const nextBtn = document.getElementById('nextBtnMinimal');
+        const volumeBtn = document.getElementById('volumeBtnMinimal');
+        const volumeIcon = document.getElementById('volumeIconMinimal');
         const volumeSlider = document.getElementById('volumeSliderMinimal');
         const progressFill = document.getElementById('progressFillMinimal');
-        const progressBar  = document.getElementById('progressBarMinimal');
-        const currentTimeEl= document.getElementById('currentTimeMinimal');
-        const totalTimeEl  = document.getElementById('totalTimeMinimal');
-        const musicTitle   = document.getElementById('musicTitleMinimal');
-        const musicPlayer  = document.getElementById('musicPlayerMinimal');
+        const progressBar = document.getElementById('progressBarMinimal');
+        const currentTimeEl = document.getElementById('currentTimeMinimal');
+        const totalTimeEl = document.getElementById('totalTimeMinimal');
+        const musicTitle = document.getElementById('musicTitleMinimal');
+        const musicPlayer = document.getElementById('musicPlayerMinimal');
+        const heroMeta = document.getElementById('heroMeta');
+
+        let currentLanguage = localStorage.getItem('plxgio-language') || 'en';
+        let currentSongIndex = 0;
+
+        const interfaceText = {
+            es: {
+                switchLight: 'Modo claro',
+                switchDark: 'Modo oscuro',
+                switchLanguage: 'English',
+                locationPrefix: 'Argentina |',
+                moreTitles: '+',
+                loadingMusic: 'Cargando musica...',
+                musicError: 'Error cargando:',
+                nav: ['sobre mi', 'proyectos', 'skills'],
+                greeting: 'Start.',
+                tagline: 'Bullshit developer / gamedev / creador 3D-2D / webdev',
+                aboutTitle: 'Sobre mi',
+                aboutTexts: [
+                    'Programador autodidacta. Me gustan tanto los videojuegos que termine haciendo los mios, casi siempre medio rotos. Me enfoco en Unity y Godot, aunque tambien disfruto otras areas del software.',
+                    'Como hobby me encanta hacer scripts inutilmente utiles y otras rarezas. La ciberseguridad me llama la atencion, asi que cada tanto termino comprometiendo mis propios sistemas por diversion.',
+                    'Por otro lado, soy fan total de CD Projekt Red y Kojima.'
+                ],
+                projectsTitle: 'Proyectos',
+                skillsTitle: 'Skills',
+                categories: ['Lenguajes', 'Frameworks y librerias', 'Herramientas', 'Cloud y proveedores', 'Aprendiendo ahora'],
+                footer: 'Desde Argentina, con amor.'
+            },
+            en: {
+                switchLight: 'Light mode',
+                switchDark: 'Dark mode',
+                switchLanguage: 'Espanol',
+                locationPrefix: 'Argentina |',
+                moreTitles: '+',
+                loadingMusic: 'Loading music...',
+                musicError: 'Error loading:',
+                nav: ['about me', 'projects', 'skills'],
+                greeting: 'Start.',
+                tagline: 'Bullshit developer / gamedev / 3D-2D maker / webdev',
+                aboutTitle: 'About Me',
+                aboutTexts: [
+                    'Self-taught programmer. I like videogames enough to end up making my own, usually a little broken. I focus on Unity and Godot, but I also enjoy other areas of software.',
+                    'As a hobby, I love making usefully useless scripts and other weird things. Cybersecurity catches my attention, so from time to time I end up compromising my own systems just for fun.',
+                    'I am a complete fangirl for CD Projekt Red and Kojima.'
+                ],
+                projectsTitle: 'Projects',
+                skillsTitle: 'Skills',
+                categories: ['Languages', 'Frameworks & Libraries', 'Tools', 'Cloud & Providers', 'Currently Learning'],
+                footer: 'From Argentina, with love.'
+            }
+        };
+
+        const projectCatalog = {
+            es: [
+                {
+                    id: 'project1',
+                    title: 'Alderfall Valley',
+                    description: 'RPG pixel art con lore profundo y decisiones que afectan la historia.',
+                    tech: ['Unity', 'C#', 'Pixel Art', 'Multiplayer'],
+                    status: 'In development',
+                    detailsId: 'project1-details'
+                },
+                {
+                    id: 'project2',
+                    title: 'Life Gestor',
+                    description: 'App local para gestionar horarios, cuentas e informacion personal.',
+                    tech: ['Python', 'SQLite', 'PyQt', 'Encryption'],
+                    status: 'Closed access',
+                    detailsId: 'project2-details'
+                },
+                {
+                    id: 'project3',
+                    title: 'Unity Game Lab',
+                    description: 'Proyecto experimental para explorar el maximo potencial y la optimizacion en Unity.',
+                    tech: ['Unity', 'C#', 'ShaderLab', 'Performance'],
+                    status: 'In development',
+                    detailsId: 'project3-details'
+                },
+                {
+                    id: 'project5',
+                    title: 'Plugins para Minecraft',
+                    description: 'Plugins y tools para servidores Minecraft con foco en roleplay, economia y administracion.',
+                    tech: ['Java', 'Spigot API', 'Roleplay', 'Economy'],
+                    status: 'Closed access',
+                    detailsId: 'project5-details'
+                },
+                {
+                    id: 'project4',
+                    title: 'Trolitas Boom',
+                    description: 'Herramienta privada para pruebas de estres, carga y estabilidad en servidores.',
+                    tech: ['Stress test', 'Monitoring', 'Server tools', 'Private'],
+                    status: 'Closed access',
+                    detailsId: 'project4-details'
+                }
+            ],
+            en: [
+                {
+                    id: 'project1',
+                    title: 'Alderfall Valley',
+                    description: 'Pixel-art RPG with deep lore and meaningful choices that affect the story.',
+                    tech: ['Unity', 'C#', 'Pixel Art', 'Multiplayer'],
+                    status: 'In development',
+                    detailsId: 'project1-details'
+                },
+                {
+                    id: 'project2',
+                    title: 'Life Gestor',
+                    description: 'Local app to manage schedules, accounts, and personal information.',
+                    tech: ['Python', 'SQLite', 'PyQt', 'Encryption'],
+                    status: 'Closed access',
+                    detailsId: 'project2-details'
+                },
+                {
+                    id: 'project3',
+                    title: 'Unity Game Lab',
+                    description: 'Experimental project to explore Unity\'s maximum potential and optimization.',
+                    tech: ['Unity', 'C#', 'ShaderLab', 'Performance'],
+                    status: 'In development',
+                    detailsId: 'project3-details'
+                },
+                {
+                    id: 'project5',
+                    title: 'Minecraft Server Plugins',
+                    description: 'Plugins and tools for Minecraft servers focused on roleplay, economy and admin utilities.',
+                    tech: ['Java', 'Spigot API', 'Roleplay', 'Economy'],
+                    status: 'Closed access',
+                    detailsId: 'project5-details'
+                },
+                {
+                    id: 'project4',
+                    title: 'Trolitas Boom',
+                    description: 'Private tool for server stress control, load testing and stability checks.',
+                    tech: ['Stress test', 'Monitoring', 'Server tools', 'Private'],
+                    status: 'Closed access',
+                    detailsId: 'project4-details'
+                }
+            ]
+        };
+
+        const projectDetailsContent = {
+            es: {
+                'project1-details': {
+                    title: 'Alderfall Valley',
+                    content: `
+                        <p>RPG estilo pixel art con lore profundo donde cada decision afecta la historia, con NPCs de personalidad compleja y combate desafiante.</p>
+                        <p><strong>Caracteristicas:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Sistema de poderes con arboles de habilidades</li>
+                            <li>Sistema complejo de relaciones con NPCs</li>
+                            <li>Modo cooperativo multijugador</li>
+                            <li>IA enemiga avanzada con comportamientos propios</li>
+                            <li>Narrativa ramificada con decisiones relevantes</li>
+                            <li>Sistema de guardado en la nube</li>
+                        </ul>
+                    `,
+                    links: ['Ver en Itch.io', 'Demo no disponible']
+                },
+                'project2-details': {
+                    title: 'Life Gestor',
+                    content: `
+                        <p>Aplicacion local para gestionar horarios, finanzas e informacion personal con foco en privacidad.</p>
+                        <p><strong>Caracteristicas:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Calendario con manejo de eventos</li>
+                            <li>Seguimiento de gastos y presupuesto</li>
+                            <li>Gestion de contactos y notas</li>
+                            <li>Automatizacion de tareas con scripts</li>
+                            <li>Almacenamiento local de datos sin nube</li>
+                            <li>Dashboard personalizable</li>
+                            <li>Cifrado de datos</li>
+                        </ul>
+                    `,
+                    links: ['Aun no disponible']
+                },
+                'project3-details': {
+                    title: 'Unity Game Lab',
+                    content: `
+                        <p>Proyecto experimental para explorar el maximo potencial de Unity mediante tecnicas de optimizacion y funciones avanzadas.</p>
+                        <p><strong>Caracteristicas:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Pruebas de optimizacion de rendimiento</li>
+                            <li>Implementaciones avanzadas de shaders</li>
+                            <li>Sistemas fisicos personalizados</li>
+                            <li>Experimentos de generacion procedural</li>
+                            <li>Arboles de comportamiento para IA</li>
+                            <li>Tecnicas de gestion de memoria</li>
+                            <li>Implementaciones multihilo</li>
+                        </ul>
+                    `,
+                    links: ['Aun no disponible']
+                },
+                'project5-details': {
+                    title: 'Plugins para Minecraft',
+                    content: `
+                        <p>Coleccion de plugins y tools para servidores de Minecraft, pensada para roleplay, economia, administracion y mejoras de rendimiento.</p>
+                        <p><strong>Caracteristicas:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Optimizacion de rendimiento del servidor</li>
+                            <li>Sistemas y utilidades para roleplay</li>
+                            <li>Economias y tiendas personalizadas</li>
+                            <li>Sistemas anti grief y proteccion</li>
+                            <li>Herramientas de gestion de jugadores</li>
+                            <li>Utilidades de administracion de mundos</li>
+                            <li>Sistemas automatizados de backup</li>
+                            <li>Logs, automatizaciones y herramientas internas</li>
+                        </ul>
+                    `,
+                    links: ['Aun no disponible']
+                },
+                'project4-details': {
+                    title: 'Trolitas Boom',
+                    content: `
+                        <p>Herramienta privada para control de estres en servidores y pruebas internas orientadas a comportamiento bajo carga.</p>
+                        <p><strong>Caracteristicas:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Escenarios de estres para servidores dedicados</li>
+                            <li>Pruebas de respuesta ante picos de trafico</li>
+                            <li>Utilidades internas para detectar cuellos de botella</li>
+                            <li>Monitoreo de estabilidad en cargas prolongadas</li>
+                            <li>Suite pensada para laboratorio y entornos privados</li>
+                        </ul>
+                    `,
+                    links: ['Aun no disponible']
+                }
+            },
+            en: {
+                'project1-details': {
+                    title: 'Alderfall Valley',
+                    content: `
+                        <p>Pixel-art style RPG with deep lore where every choice affects the story, featuring NPCs with complex personalities and challenging combat.</p>
+                        <p><strong>Features:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Power system with skill trees</li>
+                            <li>Complex NPC relationship system</li>
+                            <li>Multiplayer co-op mode</li>
+                            <li>Advanced enemy AI with behaviors</li>
+                            <li>Branching narrative with meaningful choices</li>
+                            <li>Cloud save system</li>
+                        </ul>
+                    `,
+                    links: ['View on Itch.io', 'Demo not available']
+                },
+                'project2-details': {
+                    title: 'Life Gestor',
+                    content: `
+                        <p>Local application to manage schedules, finances, and personal information with privacy focus.</p>
+                        <p><strong>Features:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Calendar with event management</li>
+                            <li>Expense tracking and budgeting</li>
+                            <li>Contact and note management</li>
+                            <li>Task automation with scripts</li>
+                            <li>Local data storage (no cloud)</li>
+                            <li>Customizable dashboard</li>
+                            <li>Data encryption</li>
+                        </ul>
+                    `,
+                    links: ['Not yet available']
+                },
+                'project3-details': {
+                    title: 'Unity Game Lab',
+                    content: `
+                        <p>Experimental project to explore Unity's maximum potential through optimization techniques and advanced features.</p>
+                        <p><strong>Features:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Performance optimization tests</li>
+                            <li>Advanced shader implementations</li>
+                            <li>Custom physics systems</li>
+                            <li>Procedural generation experiments</li>
+                            <li>AI behavior trees</li>
+                            <li>Memory management techniques</li>
+                            <li>Multi-threading implementations</li>
+                        </ul>
+                    `,
+                    links: ['Not yet available']
+                },
+                'project5-details': {
+                    title: 'Minecraft Server Plugins',
+                    content: `
+                        <p>Collection of plugins and tools for Minecraft servers focused on roleplay, economy systems, admin utilities and performance improvements.</p>
+                        <p><strong>Features:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Server performance optimization</li>
+                            <li>Roleplay systems and admin-side utilities</li>
+                            <li>Custom economy flows and shop tools</li>
+                            <li>Anti-griefing and protection systems</li>
+                            <li>Player management tools</li>
+                            <li>World management utilities</li>
+                            <li>Automated backup systems</li>
+                            <li>Logs, automation and internal server tools</li>
+                        </ul>
+                    `,
+                    links: ['Not yet available']
+                },
+                'project4-details': {
+                    title: 'Trolitas Boom',
+                    content: `
+                        <p>Private tool for server stress control and internal testing focused on behavior under heavy load.</p>
+                        <p><strong>Features:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Stress scenarios for dedicated servers</li>
+                            <li>Response testing during traffic spikes</li>
+                            <li>Internal utilities to detect bottlenecks</li>
+                            <li>Stability monitoring under prolonged load</li>
+                            <li>Suite designed for lab and private environments</li>
+                        </ul>
+                    `,
+                    links: ['Not yet available']
+                }
+            }
+        };
 
         const songs = [
-            { title: "CP2077 - The Rebel Path",                     src: "music/Cyberpunk2077Therebeldpath.mp3" },
-            { title: "Dawid Podsiadło, P.T. Adamczyk - Phantom Liberty", src: "music/Phantomliberty.mp3" },
-            { title: "Still Corners - Sad Movies",                  src: "music/sadmovies.mp3" },
-            { title: "The Black Eyed Peas - Pump It",               src: "music/pumpit.mp3" }
+            {
+                title: "CP2077 - The rebel path",
+                src: "music/Cyberpunk2077Therebeldpath.mp3"
+            },
+            {
+                title: "Dawid Podsiadło, P.T. Adamczyk - Phantom Liberty",
+                src: "music/Phantomliberty.mp3"
+            },
+            {
+                title: "Still Corners - Sad Movies",
+                src: "music/sadmovies.mp3"
+            },
+            {
+                title: "The Black Eyed Peas - Pump It",
+                src: "music/pumpit.mp3"
+            }
         ];
 
-        let currentIdx = 0, isPlaying = false, isMuted = false, lastVol = 0.1;
-        let lastScrollTop = 0, playerHidden = false, hideTimeout = null;
+        let isPlaying = false;
+        let isMuted = false;
+        let lastVolume = 0.1;
+        let lastScrollTop = 0;
+        let isPlayerHidden = false;
+        let hideTimeout = null;
+        let hasUserInteracted = false;
 
-        function randomIdx() {
-            let n;
-            do { n = Math.floor(Math.random() * songs.length); } while (n === currentIdx && songs.length > 1);
-            return n;
+        function getRandomSongIndex() {
+            if (songs.length <= 1) return 0;
+            
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * songs.length);
+            } while (newIndex === currentSongIndex && songs.length > 1);
+            
+            return newIndex;
         }
 
-        function fmt(s) {
-            const m = Math.floor(s / 60), sec = Math.floor(s % 60);
-            return `${m}:${sec < 10 ? '0' : ''}${sec}`;
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        function updateProgress() {
+            if (audioPlayer.duration && !isNaN(audioPlayer.duration)) {
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressFill.style.width = `${progress}%`;
+                currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+                totalTimeEl.textContent = formatTime(audioPlayer.duration);
+            }
         }
 
         function loadSong(random = true) {
-            if (random) currentIdx = randomIdx();
-            const song = songs[currentIdx];
+            let newIndex;
+            
+            if (random) {
+                newIndex = getRandomSongIndex();
+            } else {
+                newIndex = currentSongIndex;
+            }
+            
+            currentSongIndex = newIndex;
+            const song = songs[currentSongIndex];
+            
             musicTitle.textContent = song.title;
-            audio.src = song.src;
-            audio.load();
-            audio.addEventListener('canplay', function once() {
-                if (isPlaying) audio.play().catch(()=>{});
-                audio.removeEventListener('canplay', once);
+            
+            audioPlayer.src = song.src;
+            audioPlayer.load();
+            
+            audioPlayer.addEventListener('canplay', function onCanPlay() {
+                if (hasUserInteracted && isPlaying) {
+                    audioPlayer.play().catch(e => {
+                        console.log("Error al reproducir:", e);
+                    });
+                }
+                audioPlayer.removeEventListener('canplay', onCanPlay);
             });
-            audio.addEventListener('error', function once() {
-                setTimeout(() => loadSong(true), 2000);
-                audio.removeEventListener('error', once);
+            
+            audioPlayer.addEventListener('error', function onError(e) {
+                console.error("Error cargando canción:", song.title, e);
+                musicTitle.textContent = interfaceText[currentLanguage].musicError + " " + song.title;
+                
+                setTimeout(() => {
+                    loadSong(true);
+                }, 2000);
+                
+                audioPlayer.removeEventListener('error', onError);
             });
         }
 
         function togglePlay() {
+            hasUserInteracted = true;
+            
             if (isPlaying) {
-                audio.pause();
-                playIcon.classList.replace('fa-pause', 'fa-play');
+                audioPlayer.pause();
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
                 isPlaying = false;
             } else {
-                audio.play().then(() => {
-                    playIcon.classList.replace('fa-play', 'fa-pause');
+                audioPlayer.play().then(() => {
+                    playIcon.classList.remove('fa-play');
+                    playIcon.classList.add('fa-pause');
                     isPlaying = true;
-                }).catch(()=>{});
+                }).catch(e => {
+                    console.error("Error al reproducir:", e);
+                });
             }
         }
 
         function toggleMute() {
+            hasUserInteracted = true;
+            
             if (isMuted) {
-                audio.volume = lastVol;
-                volumeSlider.value = lastVol;
-                volumeIcon.classList.replace('fa-volume-mute', 'fa-volume-up');
+                audioPlayer.volume = lastVolume;
+                volumeSlider.value = lastVolume;
+                volumeIcon.classList.remove('fa-volume-mute');
+                volumeIcon.classList.add('fa-volume-up');
             } else {
-                lastVol = audio.volume;
-                audio.volume = 0;
+                lastVolume = audioPlayer.volume;
+                audioPlayer.volume = 0;
                 volumeSlider.value = 0;
-                volumeIcon.classList.replace('fa-volume-up', 'fa-volume-mute');
+                volumeIcon.classList.remove('fa-volume-up');
+                volumeIcon.classList.add('fa-volume-mute');
             }
             isMuted = !isMuted;
         }
 
-        audio.addEventListener('timeupdate', () => {
-            if (!audio.duration || isNaN(audio.duration)) return;
-            progressFill.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
-            currentTimeEl.textContent = fmt(audio.currentTime);
-            totalTimeEl.textContent   = fmt(audio.duration);
-        });
-
-        audio.addEventListener('ended', () => { loadSong(true); });
-
-        progressBar.addEventListener('click', e => {
+        function seekToPosition(e) {
+            hasUserInteracted = true;
+            
             const rect = progressBar.getBoundingClientRect();
-            if (audio.duration && !isNaN(audio.duration))
-                audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
-        });
+            const position = (e.clientX - rect.left) / rect.width;
+            
+            if (audioPlayer.duration && !isNaN(audioPlayer.duration)) {
+                audioPlayer.currentTime = position * audioPlayer.duration;
+            }
+        }
 
-        volumeSlider.addEventListener('input', e => {
-            const v = parseFloat(e.target.value);
-            audio.volume = v; lastVol = v;
-            if (v === 0) { volumeIcon.classList.replace('fa-volume-up','fa-volume-mute'); isMuted = true; }
-            else         { volumeIcon.classList.replace('fa-volume-mute','fa-volume-up'); isMuted = false; }
-        });
-
-        playBtn.addEventListener('click', togglePlay);
-        prevBtn.addEventListener('click', () => { loadSong(true); });
-        nextBtn.addEventListener('click', () => { loadSong(true); });
-        volumeBtn.addEventListener('click', toggleMute);
-
-        // scroll hide/show
-        window.addEventListener('scroll', () => {
-            const st = window.pageYOffset;
-            if (st <= 100) {
-                musicPlayer.classList.replace('hidden','visible');
-                playerHidden = false;
-            } else if (st > lastScrollTop && !playerHidden) {
-                musicPlayer.classList.replace('visible','hidden');
-                playerHidden = true;
-            } else if (st < lastScrollTop && playerHidden) {
-                musicPlayer.classList.replace('hidden','visible');
-                playerHidden = false;
+        function handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollThreshold = 100;
+            
+            if (scrollTop <= scrollThreshold) {
+                if (isPlayerHidden) {
+                    musicPlayer.classList.remove('hidden');
+                    musicPlayer.classList.add('visible');
+                    isPlayerHidden = false;
+                }
+                return;
+            }
+            
+            if (scrollTop > lastScrollTop && !isPlayerHidden) {
+                musicPlayer.classList.remove('visible');
+                musicPlayer.classList.add('hidden');
+                isPlayerHidden = true;
+            } 
+            else if (scrollTop < lastScrollTop && isPlayerHidden) {
+                musicPlayer.classList.remove('hidden');
+                musicPlayer.classList.add('visible');
+                isPlayerHidden = false;
+                
                 clearTimeout(hideTimeout);
                 hideTimeout = setTimeout(() => {
-                    if (window.pageYOffset > 100 && !musicPlayer.matches(':hover')) {
-                        musicPlayer.classList.replace('visible','hidden');
-                        playerHidden = true;
+                    if (scrollTop > scrollThreshold && !musicPlayer.matches(':hover')) {
+                        musicPlayer.classList.remove('visible');
+                        musicPlayer.classList.add('hidden');
+                        isPlayerHidden = true;
                     }
                 }, 3000);
             }
-            lastScrollTop = st;
-        });
+            
+            lastScrollTop = scrollTop;
+        }
 
-        musicPlayer.addEventListener('mouseenter', () => {
-            if (playerHidden) {
-                musicPlayer.classList.replace('hidden','visible');
-                playerHidden = false;
+        function showPlayer() {
+            if (isPlayerHidden) {
+                musicPlayer.classList.remove('hidden');
+                musicPlayer.classList.add('visible');
+                isPlayerHidden = false;
+                
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const scrollThreshold = 100;
+                    if (scrollTop > scrollThreshold && !musicPlayer.matches(':hover')) {
+                        musicPlayer.classList.remove('visible');
+                        musicPlayer.classList.add('hidden');
+                        isPlayerHidden = true;
+                    }
+                }, 3000);
+            }
+        }
+
+        playBtn.addEventListener('click', togglePlay);
+        
+        prevBtn.addEventListener('click', () => {
+            hasUserInteracted = true;
+            loadSong(true);
+            if (isPlaying) {
+                audioPlayer.play();
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            hasUserInteracted = true;
+            loadSong(true);
+            if (isPlaying) {
+                audioPlayer.play();
+            }
+        });
+        
+        volumeBtn.addEventListener('click', toggleMute);
+        
+        volumeSlider.addEventListener('input', (e) => {
+            hasUserInteracted = true;
+            const volume = parseFloat(e.target.value);
+            audioPlayer.volume = volume;
+            lastVolume = volume;
+            
+            if (volume === 0) {
+                volumeIcon.classList.remove('fa-volume-up');
+                volumeIcon.classList.add('fa-volume-mute');
+                isMuted = true;
+            } else {
+                volumeIcon.classList.remove('fa-volume-mute');
+                volumeIcon.classList.add('fa-volume-up');
+                isMuted = false;
             }
         });
 
-        // init
-        audio.volume = 0.1;
-        loadSong(true);
-        setTimeout(() => {
-            audio.play().then(() => {
-                isPlaying = true;
-                playIcon.classList.replace('fa-play','fa-pause');
-            }).catch(()=>{});
-        }, 800);
+        progressBar.addEventListener('click', seekToPosition);
+        musicPlayer.addEventListener('mouseenter', showPlayer);
+        audioPlayer.addEventListener('timeupdate', updateProgress);
+        
+        audioPlayer.addEventListener('ended', () => {
+            loadSong(true);
+            if (isPlaying) {
+                audioPlayer.play();
+            }
+        });
 
-        document.addEventListener('click', () => {
-            if (!isPlaying) {
-                audio.play().then(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        function initializeMusicPlayer() {
+            audioPlayer.volume = 0.1;
+            volumeSlider.value = 0.1;
+            
+            loadSong(true);
+            
+            hasUserInteracted = true;
+            
+            setTimeout(() => {
+                audioPlayer.play().then(() => {
                     isPlaying = true;
-                    playIcon.classList.replace('fa-play','fa-pause');
-                }).catch(()=>{});
+                    playIcon.classList.remove('fa-play');
+                    playIcon.classList.add('fa-pause');
+                }).catch(e => {
+                    console.log("Reproducción automática bloqueada. El usuario debe hacer clic en play.");
+                });
+            }, 1000);
+        }
+
+        function applyProjectDetailsLanguage() {
+            const detailsForLanguage = projectDetailsContent[currentLanguage];
+
+            Object.entries(detailsForLanguage).forEach(([detailsId, data]) => {
+                const section = document.getElementById(detailsId);
+                if (!section) return;
+
+                section.querySelector('.details-title').textContent = data.title;
+                section.querySelector('.details-content').innerHTML = data.content;
+
+                const links = section.querySelectorAll('.details-link');
+                data.links.forEach((label, index) => {
+                    if (!links[index]) return;
+                    const iconHtml = links[index].querySelector('i').outerHTML;
+                    links[index].innerHTML = `${iconHtml} ${label}`;
+                });
+            });
+        }
+
+        function renderTagline(animated = false) {
+            const tagline = document.querySelector('.tagline');
+            const text = interfaceText[currentLanguage].tagline;
+            tagline.textContent = '';
+
+            if (!animated) {
+                tagline.textContent = text;
+                return;
+            }
+
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    tagline.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 35);
+                }
+            }
+
+            typeWriter();
+        }
+
+        function updateHeroMeta() {
+            const formatter = new Intl.DateTimeFormat(currentLanguage === 'es' ? 'es-AR' : 'en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZone: 'America/Argentina/Buenos_Aires'
+            });
+
+            heroMeta.textContent = `${interfaceText[currentLanguage].locationPrefix} ${formatter.format(new Date())}`;
+        }
+
+        function applyLanguage(animatedTagline = false) {
+            const text = interfaceText[currentLanguage];
+            document.documentElement.lang = currentLanguage;
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks[0].textContent = text.nav[0];
+            navLinks[1].textContent = text.nav[1];
+            navLinks[2].textContent = text.nav[2];
+
+            document.querySelector('.greeting').textContent = text.greeting;
+            document.querySelector('.about-title').textContent = text.aboutTitle;
+            document.querySelector('.carousel-title').textContent = text.projectsTitle;
+            document.querySelector('.skills-title').textContent = text.skillsTitle;
+
+            const aboutParagraphs = document.querySelectorAll('.about-text');
+            text.aboutTexts.forEach((paragraph, index) => {
+                if (aboutParagraphs[index]) {
+                    aboutParagraphs[index].textContent = paragraph;
+                }
+            });
+
+            const categoryTitles = document.querySelectorAll('.category-title');
+            text.categories.forEach((label, index) => {
+                if (!categoryTitles[index]) return;
+                const iconHtml = categoryTitles[index].querySelector('i').outerHTML;
+                categoryTitles[index].innerHTML = `${iconHtml} ${label}`;
+            });
+
+            document.querySelector('.copyright').innerHTML = `&copy; <span id="current-year">${new Date().getFullYear()}</span> Plxgio.  | ${text.footer}`;
+
+            if (!audioPlayer.src) {
+                musicTitle.textContent = text.loadingMusic;
+            }
+
+            applyProjectDetailsLanguage();
+            initInfiniteCarousel();
+            renderTagline(animatedTagline);
+            updateHeroMeta();
+            localStorage.setItem('plxgio-language', currentLanguage);
+        }
+
+        function createParticles() {
+            const particlesBg = document.getElementById('particles-bg');
+            const symbols = 18;
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                const symbolClass = `symbol-${Math.floor(Math.random() * symbols) + 1}`;
+                particle.className = `particle ${symbolClass}`;
+                
+                particle.style.left = `${Math.random() * 100}%`;
+                const size = Math.random() * 20 + 15;
+                particle.style.fontSize = `${size}px`;
+                const opacity = Math.random() * 0.2 + 0.1;
+                const blueValue = Math.floor(Math.random() * 50) + 150;
+                particle.style.color = `rgba(77, ${blueValue}, 247, ${opacity})`;
+                const duration = Math.random() * 15 + 20;
+                const delay = Math.random() * 15;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesBg.appendChild(particle);
+            }
+        }
+
+        function initInfiniteCarousel() {
+            const track = document.getElementById('carouselTrack');
+            track.innerHTML = '';
+            
+            const projects = projectCatalog[currentLanguage];
+            projects.forEach((project) => {
+                const slide = document.createElement('div');
+                slide.className = `project-slide${project.id === 'project4' ? ' project-slide--centered' : ''}`;
+                slide.dataset.detailsId = project.detailsId;
+                
+                slide.innerHTML = `
+                    <div class="project-status">${project.status}</div>
+                    <h3 class="slide-title">${project.title}</h3>
+                    <p class="slide-description">${project.description}</p>
+                    <div class="slide-tech">
+                        ${project.tech.map(tech => `<span class="slide-tag">${tech}</span>`).join('')}
+                    </div>
+                `;
+                
+                slide.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openProjectDetails(project.detailsId);
+                });
+                
+                track.appendChild(slide);
+            });
+        }
+
+        function openProjectDetails(detailsId) {
+            document.querySelectorAll('.project-details-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            const detailsSection = document.getElementById(detailsId);
+            if (detailsSection) {
+                detailsSection.classList.add('active');
+                detailsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function closeProjectDetails() {
+            document.querySelectorAll('.project-details-section').forEach(section => {
+                section.classList.remove('active');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            initializeMusicPlayer();
+            applyLanguage(true);
+            updateHeroMeta();
+            setInterval(updateHeroMeta, 1000);
+            
+            document.querySelectorAll('.close-btn').forEach(btn => {
+                btn.addEventListener('click', closeProjectDetails);
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        closeProjectDetails();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        document.addEventListener('click', function() {
+            if (!hasUserInteracted) {
+                hasUserInteracted = true;
+                if (!isPlaying) {
+                    audioPlayer.play().then(() => {
+                        isPlaying = true;
+                        playIcon.classList.remove('fa-play');
+                        playIcon.classList.add('fa-pause');
+                    }).catch(e => {
+                        console.log("Reproducción activada por clic");
+                    });
+                }
             }
         }, { once: true });
     </script>
