@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#050708">
+    <meta name="description" content="Portfolio de Plxgio: desarrollo de software, proyectos, servicios, herramientas y experimentos personales.">
+    <title>Plxgio — Developer Modes</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/devicon.min.css">
+    <link rel="icon" href="img/topbar-logo-compact.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="entry-active" data-mode="main">
+    <script src="js/bootstrap.js"></script>
+
+    <noscript>
+        <style>
+            .welcome-screen, .entry-gate { display: none !important; }
+            body.entry-active { overflow: auto; }
+            body.entry-active .page-shell { visibility: visible; }
+        </style>
+    </noscript>
+
+    <a class="skip-link" id="skipLink" href="#content" tabindex="-1">Saltar al contenido</a>
+    <div class="transition-line" aria-hidden="true"></div>
+
+    <section class="welcome-screen" id="welcomeScreen" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+        <div class="welcome-whispers" aria-hidden="true">
+            <span>Like heroes in the rain</span>
+            <span>The moon is always spying on your fears</span>
+            <span>To Tokio network stocks, I stream</span>
+            <span>All of my wasted dreams on the screen</span>
+            <span>Just keep running</span>
+            <span>i gently open the door...</span>
+            <span>There is nothing in this world that is not in the process of becoming something else.</span>
+            <span>Never stop fight</span>
+        </div>
+        <div class="welcome-content">
+            <h1 class="welcome-title" id="welcomeTitle">Plxgio</h1>
+            <p class="welcome-role">Software Developer</p>
+            <p class="welcome-phrase">I just keep running.</p>
+            <button class="welcome-enter" id="welcomeEnter" type="button">Entrar</button>
+        </div>
+    </section>
+
+    <section class="entry-gate" id="entryGate" role="dialog" aria-modal="true" aria-label="Elegir perfil de desarrollador" aria-hidden="true" inert>
+        <div class="entry-half entry-half--main">
+            <div class="entry-preview" aria-hidden="true">
+                <div class="preview-top">
+                    <span>Developer profile</span>
+                    <div class="preview-dots"><span></span><span></span><span></span></div>
+                    <span>Main / 01</span>
+                </div>
+                <div class="preview-hero">
+                    <p class="preview-title">Software<br>and web.</p>
+                </div>
+                <div class="preview-lower">
+                    <div class="preview-block"></div>
+                    <div class="preview-block"></div>
+                </div>
+            </div>
+            <div class="entry-choice">
+                <div class="entry-choice-meta" aria-hidden="true">
+                    <span>01</span><span>Core dev</span>
+                </div>
+                <button class="entry-select" type="button" data-entry-mode="main">Main</button>
+            </div>
+        </div>
+
+        <div class="entry-half entry-half--hobbie">
+            <div class="entry-preview" aria-hidden="true">
+                <div class="preview-top">
+                    <span>Developer profile</span>
+                    <div class="preview-dots"><span></span><span></span><span></span></div>
+                    <span>Hobbie / 02</span>
+                </div>
+                <div class="preview-hero">
+                    <p class="preview-title">Random<br>stuff.</p>
+                </div>
+                <div class="preview-lower">
+                    <div class="preview-block"></div>
+                    <div class="preview-block"></div>
+                </div>
+            </div>
+            <div class="entry-choice">
+                <div class="entry-choice-meta" aria-hidden="true">
+          <span>02</span><span>Fun lab</span>
+                </div>
+                <button class="entry-select" type="button" data-entry-mode="hobbie">Hobbie</button>
+            </div>
+        </div>
+
+        <div class="entry-divider" aria-hidden="true"></div>
+    </section>
+
+    <div class="page-shell" id="pageShell">
+        <header class="social-topbar">
+            <div class="social-brand">
+                <span class="topbar-logo">
+                    <img src="img/topbar-logo-compact.png" width="384" height="256" decoding="async" alt="Logo de Plxgio">
+                </span>
+            </div>
+
+            <div class="mode-switch" role="group" aria-label="Elegir perfil de desarrollador">
+                <span class="mode-indicator" aria-hidden="true"></span>
+                <button class="mode-button" type="button" data-mode-target="main" aria-pressed="true">
+                    Main
+                </button>
+                <button class="mode-button" type="button" data-mode-target="hobbie" aria-pressed="false">
+                    Hobbie
+                </button>
+            </div>
+        </header>
+
+        <main class="social-profile" id="content" tabindex="-1">
+            <div class="profile-ambient" aria-hidden="true">
+                <span>&lt;/&gt;</span>
+                <span>{ }</span>
+                <span>0xFF</span>
+                <span>=&gt;</span>
+                <span>[ ]</span>
+                <span>if()</span>
+                <span>&amp;&amp;</span>
+                <span>git</span>
+                <span>//</span>
+                <span>0101</span>
+                <span>#</span>
+                <span>fn()</span>
+                <span>::</span>
+                <span>NULL</span>
+                <span>sudo</span>
+                <span>*</span>
+                <span>@</span>
+                <span>npm</span>
+            </div>
+
+            <section class="profile-cover" aria-label="Banner del perfil">
+                <div class="cover-layer cover-layer--main">
+                    <code class="code-banner" aria-label="Si estoy en el proyecto, el proyecto será exitoso">
+                        <span><b>if</b> (project.has(<em>"me"</em>)) {</span>
+                        <span>&nbsp;&nbsp;<b>return</b> project.success();</span>
+                        <span>}<i class="code-caret" aria-hidden="true">_</i></span>
+                    </code>
+                </div>
+                <div class="cover-layer cover-layer--hobbie" aria-hidden="true">
+                    <picture>
+                        <source media="(prefers-reduced-motion: reduce)" srcset="img/banner-static.jpg" type="image/jpeg">
+                        <img src="img/banner.gif" width="640" height="432" decoding="async" alt="Banner animado de Plxgio">
+                    </picture>
+                </div>
+            </section>
+
+            <section class="profile-intro" aria-labelledby="profileName">
+                <p class="profile-local-time" id="profileLocalTime" aria-live="off">Hora local - --:--:--</p>
+
+                <div class="profile-avatar-column">
+                    <button class="profile-avatar" id="profileAvatarButton" type="button" aria-label="Ampliar logo personal">
+                        <img class="avatar-layer avatar-layer--main" src="img/main-profile.png" width="703" height="656" decoding="async" alt="Logo de perfil de Plxgio">
+                        <img class="avatar-layer avatar-layer--hobbie" src="img/icon.jpg" width="238" height="238" decoding="async" aria-hidden="true" alt="Foto de perfil de Plxgio en modo Hobbie">
+                    </button>
+                    <div class="profile-plates" data-profile-content="main" aria-label="Placas principales del perfil Main">
+                        <div class="badge-popover-item">
+                            <button class="profile-plate badge-trigger" type="button" aria-expanded="false" aria-controls="badgeCybersec">
+                                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                                <span>Cybersec enjoyer</span>
+                            </button>
+                            <div class="badge-popover" id="badgeCybersec" role="tooltip" aria-hidden="true">
+                                <strong>Cybersec enjoyer</strong>
+                                <p>Disfruto experimentando con la ciberseguridad, me gusta armar protecciones y a su vez vulnerarlas con la finalidad de mejorarlas constantemente.</p>
+                            </div>
+                        </div>
+                        <div class="badge-popover-item">
+                            <button class="profile-plate badge-trigger" type="button" aria-expanded="false" aria-controls="badgeWebDeveloper">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                                <span>Web developer</span>
+                            </button>
+                            <div class="badge-popover" id="badgeWebDeveloper" role="tooltip" aria-hidden="true">
+                                <strong>Web developer</strong>
+                                <p>Una web es una forma dinámica de conectar con los usuarios, me gusta crear páginas web con diseños interesantes.</p>
+                            </div>
+                        </div>
+                        <div class="badge-popover-item">
+                            <button class="profile-plate badge-trigger" type="button" aria-expanded="false" aria-controls="badgeRevEng">
+                                <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                                <span>Rev eng</span>
+                            </button>
+                            <div class="badge-popover" id="badgeRevEng" role="tooltip" aria-hidden="true">
+                                <strong>Rev eng</strong>
+                                <p>No hay nada mejor que entender cómo funcionan las cosas, por eso mismo diría que me apasiona la ingeniería inversa: desmontar pieza por pieza, o código por código, es una de mis actividades favoritas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-plates" data-profile-content="hobbie" aria-label="Placas principales del perfil Hobbie" hidden>
+                        <div class="badge-popover-item">
+                            <button class="profile-plate badge-trigger" type="button" aria-expanded="false" aria-controls="badgeRandomSoftwareDev">
+                                <i class="fa-solid fa-dice" aria-hidden="true"></i>
+                                <span>Random software dev</span>
+                            </button>
+                            <div class="badge-popover" id="badgeRandomSoftwareDev" role="tooltip" aria-hidden="true">
+                                <strong>Random software dev</strong>
+                                <p>Creo software random y normalmente inútil.</p>
+                            </div>
+                        </div>
+                        <div class="badge-popover-item">
+                            <button class="profile-plate badge-trigger" type="button" aria-expanded="false" aria-controls="badgeIndieGamedev">
+                                <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                                <span>Indie gamedev</span>
+                            </button>
+                            <div class="badge-popover" id="badgeIndieGamedev" role="tooltip" aria-hidden="true">
+                                <strong>Indie gamedev</strong>
+                                <p>Hago jueguitos.</p>
+                            </div>
+                        </div>
+                        <div class="badge-popover-item">
+                            <button class="profile-plate badge-trigger" type="button" aria-expanded="false" aria-controls="badgeCommunityCreator">
+                                <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                                <span>Community creator</span>
+                            </button>
+                            <div class="badge-popover" id="badgeCommunityCreator" role="tooltip" aria-hidden="true">
+                                <strong>Community creator</strong>
+                                <p>De vez en cuando me gusta crear comunidades, ya sea de juegos, servidores o cosas aleatorias. Es normal que después termine ghosteando a mi propia comunidad, pero las risas no faltan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+                    <div class="profile-heading-row">
+                        <div>
+                            <div class="profile-name-line">
+                                <h1 class="profile-name" id="profileName">Plxgio</h1>
+                                <span class="dev-status" id="developerStatus" role="status" tabindex="0"
+                                    aria-label="Estado del desarrollador" data-tooltip="Comprobando estado">
+                                    <span class="dev-status-icon" aria-hidden="true">{ }</span>
+                                </span>
+                            </div>
+                            <p class="profile-handle">@plxgio</p>
+                        </div>
+                    </div>
+
+                    <div class="social-copy-stack">
+                        <p class="social-copy social-copy--main">
+                            Desarrollo principal orientado a web, aplicaciones, software y herramientas que resuelven problemas concretos.
+                        </p>
+                        <p class="social-copy social-copy--hobbie" aria-hidden="true">
+                            De este lado soy lo que soy fuera del profesionalismo, casi diría que mi lado más real.
+                        </p>
+                    </div>
+
+                    <nav class="profile-links" aria-label="Enlaces sociales">
+                        <a class="profile-link" href="https://x.com/Plxgio" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter">
+                            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a class="profile-link" href="https://github.com/Plxgio" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <div class="discord-reveal" id="discordReveal">
+                            <button class="profile-link" id="discordToggle" type="button" aria-label="Mostrar usuario de Discord" aria-controls="discordHandle" aria-expanded="false" title="Discord">
+                                <i class="fa-brands fa-discord" aria-hidden="true"></i>
+                            </button>
+                            <span class="discord-handle" id="discordHandle" aria-hidden="true">plxgio</span>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+
+            <div class="content-layout">
+                <div class="sidebar-column">
+                    <aside class="personal-card" aria-labelledby="personalInfoTitle">
+                        <header class="personal-card-header">
+                            <h2 id="personalInfoTitle">Información personal</h2>
+                        </header>
+
+                        <ul class="personal-list">
+                            <li class="personal-item">
+                                <span class="personal-icon" aria-hidden="true"><i class="fa-solid fa-cake-candles"></i></span>
+                                <div>
+                                    <span class="personal-label">Cumpleaños</span>
+                                    <strong>28/02</strong>
+                                    <small class="birthday-countdown" id="birthdayCountdown">Calculando...</small>
+                                </div>
+                            </li>
+                            <li class="personal-item">
+                                <span class="personal-icon" aria-hidden="true"><i class="fa-solid fa-mars"></i></span>
+                                <div>
+                                    <span class="personal-label">Género</span>
+                                    <strong>Hombre</strong>
+                                </div>
+                            </li>
+                            <li class="personal-item">
+                                <span class="personal-icon" aria-hidden="true"><i class="fa-solid fa-flag"></i></span>
+                                <div>
+                                    <span class="personal-label">Nacionalidad</span>
+                                    <strong>Argentina</strong>
+                                </div>
+                            </li>
+                            <li class="personal-item">
+                                <span class="personal-icon" aria-hidden="true"><i class="fa-solid fa-language"></i></span>
+                                <div>
+                                    <span class="personal-label">Idiomas</span>
+                                    <strong>Inglés · Español · Portugués</strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <aside class="personal-card other-badges-card" data-profile-content="main" aria-labelledby="otherBadgesTitle">
+                        <header class="personal-card-header">
+                            <h2 id="otherBadgesTitle">Otras placas</h2>
+                        </header>
+
+                        <div class="other-badges-list">
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeDiscreteDeveloper">
+                                    <i class="fa-solid fa-user-secret" aria-hidden="true"></i>
+                                    <span>Desarrollador discreto</span>
+                                </button>
+                                <div class="badge-popover" id="badgeDiscreteDeveloper" role="tooltip" aria-hidden="true">
+                                    <strong>Desarrollador discreto</strong>
+                                    <p>Si me comprometo con un proyecto, va a ser de forma discreta y profesional, nada sale fuera del dev y cliente.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeMercenary">
+                                    <i class="fa-solid fa-coins" aria-hidden="true"></i>
+                                    <span>Mercenario</span>
+                                </button>
+                                <div class="badge-popover" id="badgeMercenary" role="tooltip" aria-hidden="true">
+                                    <strong>Mercenario</strong>
+                                    <p>Si el presupuesto es suficiente, no hay trabajo rechazado.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeReliableDeveloper">
+                                    <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                                    <span>Desarrollador confiable</span>
+                                </button>
+                                <div class="badge-popover" id="badgeReliableDeveloper" role="tooltip" aria-hidden="true">
+                                    <strong>Desarrollador confiable</strong>
+                                    <p>Los proyectos se entregan en tiempo y forma, siempre cobrando una tarifa <em class="badge-danger">real</em> según el esfuerzo aplicado en el proyecto.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeArgentinian">
+                                    <i class="fa-solid fa-flag" aria-hidden="true"></i>
+                                    <span>Argentino</span>
+                                </button>
+                                <div class="badge-popover" id="badgeArgentinian" role="tooltip" aria-hidden="true">
+                                    <strong>Argentino</strong>
+                                    <p>Defiendo el valor de mi nacionalidad hasta la muerte, por lo tanto, sin importar la tarifa del trabajo, nunca voy a aceptar algo que transmita o busque atacar mi patria.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeGreyHat">
+                                    <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+                                    <span>Sombrero gris</span>
+                                </button>
+                                <div class="badge-popover" id="badgeGreyHat" role="tooltip" aria-hidden="true">
+                                    <strong>Sombrero gris</strong>
+                                    <p>Me gusta invadir sistemas con la finalidad de comunicar las fallas a sus autores, sin finalidad de lucro, puramente por amor al arte.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <aside class="personal-card other-badges-card" data-profile-content="hobbie" aria-labelledby="hobbieBadgesTitle" hidden>
+                        <header class="personal-card-header">
+                            <h2 id="hobbieBadgesTitle">Otras placas</h2>
+                        </header>
+                        <div class="other-badges-list">
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeMinecraftOg">
+                                    <i class="fa-solid fa-cube" aria-hidden="true"></i>
+                                    <span>Minecraft OG</span>
+                                </button>
+                                <div class="badge-popover" id="badgeMinecraftOg" role="tooltip" aria-hidden="true">
+                                    <strong>Minecraft OG</strong>
+                                    <p>Jugador activo de Minecraft desde 2013, tier 2 en PvP (peak), builder y técnico.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeAltEnjoyer">
+                                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                                    <span>Trolitas alt enjoyer</span>
+                                </button>
+                                <div class="badge-popover" id="badgeAltEnjoyer" role="tooltip" aria-hidden="true">
+                                    <strong>Trolitas alt enjoyer</strong>
+                                    <p>Admirador de la estética “alternativa”; no confundir con la estética de moda “gotitrola”.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeWeebDeveloper">
+                                    <i class="fa-solid fa-torii-gate" aria-hidden="true"></i>
+                                    <span>Weeb developer</span>
+                                </button>
+                                <div class="badge-popover" id="badgeWeebDeveloper" role="tooltip" aria-hidden="true">
+                                    <strong>Weeb developer</strong>
+                                    <p>Aguante Japón y el hentai. Te amo Goku.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeCyberpunkFan">
+                                    <i class="fa-solid fa-city" aria-hidden="true"></i>
+                                    <span>Cyberpunk fan</span>
+                                </button>
+                                <div class="badge-popover" id="badgeCyberpunkFan" role="tooltip" aria-hidden="true">
+                                    <strong>Cyberpunk fan</strong>
+                                    <p>Si solo pudiera jugar un juego por el resto de mi vida, claramente sería cyberpunk.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeKojimaLover">
+                                    <i class="fa-solid fa-film" aria-hidden="true"></i>
+                                    <span>Kojima lover</span>
+                                </button>
+                                <div class="badge-popover" id="badgeKojimaLover" role="tooltip" aria-hidden="true">
+                                    <strong>Kojima lover</strong>
+                                    <p>Qué director del re carajo, sus obras son peak.</p>
+                                </div>
+                            </div>
+
+                            <div class="badge-popover-item">
+                                <button class="profile-plate other-badge badge-trigger" type="button" aria-expanded="false" aria-controls="badgeMinecraftDev">
+                                    <i class="fa-solid fa-cubes-stacked" aria-hidden="true"></i>
+                                    <span>Minecraft dev</span>
+                                </button>
+                                <div class="badge-popover" id="badgeMinecraftDev" role="tooltip" aria-hidden="true">
+                                    <strong>Minecraft dev</strong>
+                                    <p>Creo mods, plugins y servidores.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="feed-column">
+                    <nav class="feed-tabs" aria-label="Contenido del perfil">
+                        <button class="feed-tab" type="button" data-feed-filter="projects" aria-pressed="true">Proyectos</button>
+                        <button class="feed-tab" type="button" data-feed-filter="services" aria-pressed="false">Servicios</button>
+                        <button class="feed-tab" type="button" data-feed-filter="tools" aria-pressed="false">Herramientas y stack</button>
+                        <button class="feed-tab" type="button" data-feed-filter="learning" aria-pressed="false">Learning</button>
+                    </nav>
+
+                    <section class="social-feed" aria-label="Contenido seleccionado de Plxgio">
+                <article class="social-post" data-feed-category="projects" data-profile-mode="main">
+                    <div class="post-grid">
+                        <div class="post-avatar" aria-hidden="true">
+                            <img class="avatar-layer avatar-layer--main" src="img/main-profile.png" width="703" height="656" loading="lazy" decoding="async" alt="">
+                            <img class="avatar-layer avatar-layer--hobbie" src="img/icon.jpg" width="238" height="238" loading="lazy" decoding="async" alt="">
+                        </div>
+                        <div class="post-content">
+                            <header class="post-head">
+                                <p class="post-author">Plxgio <span class="profile-handle">@plxgio</span></p>
+                            </header>
+                            <h2 class="post-title">Proyectos</h2>
+                            <p class="post-description">
+                                Software y herramientas en las que estoy trabajando en la actualidad, algunas pueden ser puramente por aprendizaje, otras buscan ser una solución viable para los usuarios.
+                            </p>
+                            <div class="project-list">
+                                <article class="project-card project-card--camsec">
+                                    <div class="project-card-media" aria-hidden="true">
+                                        <img src="img/camsecx-preview.jpg" width="553" height="744" loading="lazy" decoding="async" alt="">
+                                    </div>
+                                    <div class="project-card-body">
+                                        <header class="project-card-header">
+                                            <span class="project-icon" aria-hidden="true"><i class="fa-solid fa-video"></i></span>
+                                            <h3>CamsecX</h3>
+                                            <span class="project-status" tabindex="0" role="img" aria-label="Estado: En desarrollo" data-status="En desarrollo">
+                                                <span class="project-status-braces">{ }</span>
+                                            </span>
+                                        </header>
+                                        <p>
+                                            Plataforma de seguridad adaptable a distintos sistemas de vigilancia. Analiza video en tiempo real para reconocer patrones y emitir alertas ante falta de equipamiento, situaciones de riesgo u objetos y herramientas fuera de lugar.
+                                        </p>
+                                        <ul class="project-capabilities">
+                                            <li>Monitoreo nocturno y detección de movimiento fuera del horario operativo.</li>
+                                            <li>Sistema cerrado de alertas y notificaciones configurables.</li>
+                                            <li>Integración con bases de datos para contextualizar al personal presente en cada captura.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="project-card project-card--turnero">
+                                    <div class="project-card-media" aria-hidden="true">
+                                        <img src="img/turnerox-preview.png" width="572" height="313" loading="lazy" decoding="async" alt="">
+                                    </div>
+                                    <div class="project-card-body">
+                                        <header class="project-card-header">
+                                            <span class="project-icon" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+                                            <h3>TurneroX</h3>
+                                            <span class="project-status" tabindex="0" role="img" aria-label="Estado: En desarrollo" data-status="En desarrollo">
+                                                <span class="project-status-braces">{ }</span>
+                                            </span>
+                                        </header>
+                                        <p>
+                                            Sistema gratuito de gestión de turnos para negocios y emprendimientos, pensado para una instalación directa y una operación sencilla entre el comercio y sus clientes, sin pagos recurrentes ni intermediarios.
+                                        </p>
+                                        <ul class="project-capabilities">
+                                            <li>Configuración rápida y flujo de reserva simplificado.</li>
+                                            <li>Integración opcional con WhatsApp y Google Calendar.</li>
+                                            <li>Calendario propio con recordatorios y seguimiento de turnos.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="project-card project-card--bumbum">
+                                    <div class="project-card-media" aria-hidden="true">
+                                        <img src="img/bumbum-tool-preview.png" width="531" height="264" loading="lazy" decoding="async" alt="">
+                                    </div>
+                                    <div class="project-card-body">
+                                        <header class="project-card-header">
+                                            <span class="project-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></span>
+                                            <h3>BumBum Tool</h3>
+                                            <span class="project-status project-status--functional" tabindex="0" role="img" aria-label="Estado: Funcional, pendiente a actualización" data-status="Funcional, pendiente a actualización">
+                                                <span class="project-status-braces">{ }</span>
+                                                <span class="project-status-plus" aria-hidden="true">+</span>
+                                            </span>
+                                        </header>
+                                        <p>
+                                            Herramienta de evaluación de seguridad para servidores y sistemas cerrados, orientada exclusivamente a entornos autorizados y pruebas controladas de resistencia, exposición de información y robustez de credenciales.
+                                        </p>
+                                        <ul class="project-capabilities">
+                                            <li>Pruebas de estrés y análisis de respuesta del sistema.</li>
+                                            <li>Búsqueda de posibles filtraciones y datos expuestos.</li>
+                                            <li>Evaluaciones controladas de cracking simple e intermedio.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="post-more" id="projectsMore" aria-hidden="true">
+                                <div class="project-more-note">
+                                    <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Varios más en la galera...</strong>
+                                        <p>Otros proyectos, experimentos y herramientas se incorporarán a medida que estén listos para mostrarse.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="post-expand-toggle" type="button" aria-expanded="false" aria-controls="projectsMore">
+                                <span>Ver más</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="social-post" data-feed-category="services" data-profile-mode="main" hidden>
+                    <div class="post-grid">
+                        <div class="post-avatar" aria-hidden="true">
+                            <img class="avatar-layer avatar-layer--main" src="img/main-profile.png" width="703" height="656" loading="lazy" decoding="async" alt="">
+                            <img class="avatar-layer avatar-layer--hobbie" src="img/icon.jpg" width="238" height="238" loading="lazy" decoding="async" alt="">
+                        </div>
+                        <div class="post-content">
+                            <header class="post-head">
+                                <p class="post-author">Plxgio <span class="profile-handle">@plxgio</span></p>
+                            </header>
+                            <h2 class="post-title">Servicios</h2>
+                            <p class="post-description">
+                                Soluciones de desarrollo, seguridad e infraestructura adaptadas al alcance real de cada proyecto.
+                            </p>
+                            <div class="service-grid" aria-label="Servicios disponibles">
+                                <section class="service-card service-card--web">
+                                    <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+                                    <header class="service-window-bar">
+                                        <span class="service-window-dots" aria-hidden="true"></span>
+                                        <code>service://full-stack</code>
+                                    </header>
+                                    <div class="service-card-copy">
+                                        <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
+                                        <h3>Desarrollo web full stack</h3>
+                                        <p>Diseño y desarrollo de sitios, paneles y aplicaciones web completas: interfaz, APIs, bases de datos, despliegue y mantenimiento, con foco en rendimiento, seguridad y una experiencia clara.</p>
+                                    </div>
+                                </section>
+
+                                <section class="service-card service-card--custom">
+                                    <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-terminal"></i></div>
+                                    <header class="service-window-bar">
+                                        <span class="service-window-dots" aria-hidden="true"></span>
+                                        <code>service://private-build</code>
+                                    </header>
+                                    <div class="service-card-copy">
+                                        <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-cube"></i></span>
+                                        <h3>Software personalizado y privado</h3>
+                                        <p>Aplicaciones construidas alrededor del flujo real del cliente, con entrega privada, control del código y posibilidad de ejecución local o dentro de infraestructura cerrada.</p>
+                                        <p class="service-stack"><strong>Stack adaptable:</strong> Python, JavaScript/TypeScript, C#, Java, C++, Rust, React, Vue, Node.js/Express, MySQL, Docker, AWS, Firebase y Cloudflare.</p>
+                                    </div>
+                                </section>
+
+                                <section class="service-card service-card--security">
+                                    <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+                                    <header class="service-window-bar">
+                                        <span class="service-window-dots" aria-hidden="true"></span>
+                                        <code>service://secure-system</code>
+                                    </header>
+                                    <div class="service-card-copy">
+                                        <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-shield-virus"></i></span>
+                                        <h3>Software de seguridad</h3>
+                                        <p>Herramientas de monitoreo, control de acceso, alertas y análisis diseñadas para reducir riesgos y reforzar sistemas existentes sin sumar complejidad innecesaria.</p>
+                                    </div>
+                                </section>
+
+                                <section class="service-card service-card--crypto">
+                                    <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-lock"></i></div>
+                                    <header class="service-window-bar">
+                                        <span class="service-window-dots" aria-hidden="true"></span>
+                                        <code>service://cryptography</code>
+                                    </header>
+                                    <div class="service-card-copy">
+                                        <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-key"></i></span>
+                                        <h3>Cifrado y descifrado de datos</h3>
+                                        <p>Implementación de flujos seguros para proteger archivos, mensajes y bases de datos, incluyendo migración, recuperación autorizada e integración con software ya operativo.</p>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="post-more" id="servicesMore" aria-hidden="true">
+                                <div class="service-grid service-grid--more" aria-label="Servicios adicionales">
+                                    <section class="service-card service-card--tracking">
+                                        <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-location-crosshairs"></i></div>
+                                        <header class="service-window-bar">
+                                            <span class="service-window-dots" aria-hidden="true"></span>
+                                            <code>service://trace</code>
+                                        </header>
+                                        <div class="service-card-copy">
+                                            <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-route"></i></span>
+                                            <h3>Trackeo digital</h3>
+                                            <p>Trazabilidad autorizada de activos, eventos y actividad dentro de sistemas propios mediante registros, métricas y paneles de auditoría que permitan reconstruir cada operación.</p>
+                                        </div>
+                                    </section>
+
+                                    <section class="service-card service-card--protection">
+                                        <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></div>
+                                        <header class="service-window-bar">
+                                            <span class="service-window-dots" aria-hidden="true"></span>
+                                            <code>service://protection</code>
+                                        </header>
+                                        <div class="service-card-copy">
+                                            <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-user-shield"></i></span>
+                                            <h3>Protección digital</h3>
+                                            <p>Diagnóstico y refuerzo de cuentas, equipos y servicios mediante permisos, copias de seguridad, endurecimiento de configuración y reducción de superficie de ataque.</p>
+                                        </div>
+                                    </section>
+
+                                    <section class="service-card service-card--network">
+                                        <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-network-wired"></i></div>
+                                        <header class="service-window-bar">
+                                            <span class="service-window-dots" aria-hidden="true"></span>
+                                            <code>service://network</code>
+                                        </header>
+                                        <div class="service-card-copy">
+                                            <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-diagram-project"></i></span>
+                                            <h3>Gestión de redes</h3>
+                                            <p>Configuración, segmentación y monitoreo de redes para mantener conectividad, visibilidad y estabilidad, con documentación útil para su operación y mantenimiento.</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <button class="post-expand-toggle" type="button" aria-expanded="false" aria-controls="servicesMore">
+                                <span>Ver más</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="social-post" data-feed-category="tools" data-profile-mode="main" hidden>
+                    <div class="post-grid">
+                        <div class="post-avatar" aria-hidden="true">
+                            <img class="avatar-layer avatar-layer--main" src="img/main-profile.png" width="703" height="656" loading="lazy" decoding="async" alt="">
+                            <img class="avatar-layer avatar-layer--hobbie" src="img/icon.jpg" width="238" height="238" loading="lazy" decoding="async" alt="">
+                        </div>
+                        <div class="post-content">
+                            <header class="post-head">
+                                <p class="post-author">Plxgio <span class="profile-handle">@plxgio</span></p>
+                            </header>
+                            <h2 class="post-title">Herramientas &amp; stack</h2>
+                            <p class="post-description">
+                                Lenguajes, frameworks y plataformas que utilizo para construir, mantener y desplegar proyectos.
+                            </p>
+                            <div class="tool-catalog">
+                                <section class="tool-group" aria-labelledby="mainLanguagesTitle">
+                                    <header class="tool-group-header">
+                                        <span aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+                                        <h3 id="mainLanguagesTitle">Lenguajes</h3>
+                                    </header>
+                                    <div class="tool-plates">
+                                        <div class="tool-plate" data-mark="C#" style="--tool-color: #9b4fca;"><i class="devicon-csharp-plain" aria-hidden="true"></i><strong>C#</strong></div>
+                                        <div class="tool-plate" data-mark="PY" style="--tool-color: #4aa3df;"><i class="devicon-python-plain" aria-hidden="true"></i><strong>Python</strong></div>
+                                        <div class="tool-plate" data-mark="JS" style="--tool-color: #f7df1e;"><i class="devicon-javascript-plain" aria-hidden="true"></i><strong>JavaScript</strong></div>
+                                        <div class="tool-plate" data-mark="TS" style="--tool-color: #3178c6;"><i class="devicon-typescript-plain" aria-hidden="true"></i><strong>TypeScript</strong></div>
+                                        <div class="tool-plate" data-mark="H5" style="--tool-color: #e44d26;"><i class="devicon-html5-plain" aria-hidden="true"></i><strong>HTML</strong></div>
+                                        <div class="tool-plate" data-mark="C3" style="--tool-color: #2965f1;"><i class="devicon-css3-plain" aria-hidden="true"></i><strong>CSS</strong></div>
+                                        <div class="tool-plate" data-mark="JV" style="--tool-color: #f89820;"><i class="devicon-java-plain" aria-hidden="true"></i><strong>Java</strong></div>
+                                        <div class="tool-plate" data-mark="C++" style="--tool-color: #659ad2;"><i class="devicon-cplusplus-plain" aria-hidden="true"></i><strong>C++</strong></div>
+                                        <div class="tool-plate" data-mark="RS" style="--tool-color: #d7d7d7;"><i class="devicon-rust-plain" aria-hidden="true"></i><strong>Rust</strong></div>
+                                    </div>
+                                </section>
+
+                                <section class="tool-group" aria-labelledby="mainFrameworksTitle">
+                                    <header class="tool-group-header">
+                                        <span aria-hidden="true"><i class="fa-solid fa-cubes"></i></span>
+                                        <h3 id="mainFrameworksTitle">Frameworks y librerías</h3>
+                                    </header>
+                                    <div class="tool-plates">
+                                        <div class="tool-plate" data-mark="RE" style="--tool-color: #61dafb;"><i class="devicon-react-original" aria-hidden="true"></i><strong>React</strong></div>
+                                        <div class="tool-plate" data-mark="NO" style="--tool-color: #68a063;"><i class="devicon-nodejs-plain" aria-hidden="true"></i><strong>Node.js</strong></div>
+                                        <div class="tool-plate" data-mark="EX" style="--tool-color: #e9f4f5;"><i class="devicon-express-original" aria-hidden="true"></i><strong>Express</strong></div>
+                                        <div class="tool-plate" data-mark="VU" style="--tool-color: #42b883;"><i class="devicon-vuejs-plain" aria-hidden="true"></i><strong>Vue.js</strong></div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="post-more" id="toolsMore" aria-hidden="true">
+                                <div class="tool-catalog tool-catalog--more">
+                                    <section class="tool-group" aria-labelledby="mainToolsTitle">
+                                        <header class="tool-group-header">
+                                            <span aria-hidden="true"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                                            <h3 id="mainToolsTitle">Herramientas</h3>
+                                        </header>
+                                        <div class="tool-plates">
+                                            <div class="tool-plate" data-mark="GT" style="--tool-color: #f05032;"><i class="devicon-git-plain" aria-hidden="true"></i><strong>Git</strong></div>
+                                            <div class="tool-plate" data-mark="DK" style="--tool-color: #2496ed;"><i class="devicon-docker-plain" aria-hidden="true"></i><strong>Docker</strong></div>
+                                            <div class="tool-plate" data-mark="VS" style="--tool-color: #9b4fca;"><i class="devicon-visualstudio-plain" aria-hidden="true"></i><strong>Visual Studio</strong></div>
+                                            <div class="tool-plate" data-mark="VC" style="--tool-color: #23a9f2;"><i class="devicon-vscode-plain" aria-hidden="true"></i><strong>VS Code</strong></div>
+                                            <div class="tool-plate" data-mark="TR" style="--tool-color: #0079bf;"><i class="devicon-trello-plain" aria-hidden="true"></i><strong>Trello</strong></div>
+                                            <div class="tool-plate" data-mark="AP" style="--tool-color: #d22128;"><i class="devicon-apache-plain" aria-hidden="true"></i><strong>Apache</strong></div>
+                                            <div class="tool-plate" data-mark="MV" style="--tool-color: #c71a36;"><i class="devicon-maven-plain" aria-hidden="true"></i><strong>Apache Maven</strong></div>
+                                        </div>
+                                    </section>
+
+                                    <section class="tool-group" aria-labelledby="mainCloudTitle">
+                                        <header class="tool-group-header">
+                                            <span aria-hidden="true"><i class="fa-solid fa-cloud"></i></span>
+                                            <h3 id="mainCloudTitle">Cloud y proveedores</h3>
+                                        </header>
+                                        <div class="tool-plates">
+                                            <div class="tool-plate" data-mark="AWS" style="--tool-color: #ff9900;"><i class="devicon-amazonwebservices-plain" aria-hidden="true"></i><strong>AWS</strong></div>
+                                            <div class="tool-plate" data-mark="SQL" style="--tool-color: #4479a1;"><i class="devicon-mysql-plain" aria-hidden="true"></i><strong>MySQL</strong></div>
+                                            <div class="tool-plate" data-mark="GH" style="--tool-color: #e6edf3;"><i class="devicon-github-original" aria-hidden="true"></i><strong>GitHub</strong></div>
+                                            <div class="tool-plate" data-mark="PAGE" style="--tool-color: #58a6ff;"><i class="devicon-github-original" aria-hidden="true"></i><strong>GitHub Pages</strong></div>
+                                            <div class="tool-plate" data-mark="CF" style="--tool-color: #f38020;"><i class="devicon-cloudflare-plain" aria-hidden="true"></i><strong>Cloudflare</strong></div>
+                                            <div class="tool-plate" data-mark="FB" style="--tool-color: #ffca28;"><i class="devicon-firebase-plain" aria-hidden="true"></i><strong>Firebase</strong></div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <button class="post-expand-toggle" type="button" aria-expanded="false" aria-controls="toolsMore">
+                                <span>Ver más</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="social-post" data-feed-category="learning" data-profile-mode="main" hidden>
+                    <div class="post-grid">
+                        <div class="post-avatar" aria-hidden="true">
+                            <img class="avatar-layer avatar-layer--main" src="img/main-profile.png" width="703" height="656" loading="lazy" decoding="async" alt="">
+                            <img class="avatar-layer avatar-layer--hobbie" src="img/icon.jpg" width="238" height="238" loading="lazy" decoding="async" alt="">
+                        </div>
+                        <div class="post-content">
+                            <header class="post-head">
+                                <p class="post-author">Plxgio <span class="profile-handle">@plxgio</span></p>
+                            </header>
+                            <h2 class="post-title">Learning</h2>
+                            <div class="learning-state">
+                                <span class="learning-state-icon" aria-hidden="true"><i class="fa-solid fa-arrows-rotate"></i></span>
+                                <p>
+                                    No estoy aprendiendo nada actualmente, simplemente mejorando mis conocimientos en mis
+                                    <button class="learning-stack-link" type="button" data-feed-jump="tools">herramientas y stack</button>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="social-post" data-feed-category="projects" data-profile-mode="hobbie" hidden>
+                    <div class="post-grid">
+                        <div class="post-avatar" aria-hidden="true"><img src="img/icon.jpg" width="238" height="238" loading="lazy" decoding="async" alt=""></div>
+                        <div class="post-content">
+                            <header class="post-head"><p class="post-author">Plxgio <span class="profile-handle">@plxgio</span></p></header>
+                            <h2 class="post-title">Proyectos</h2>
+                            <p class="post-description">Software random, experimentos y jueguitos que construyo por curiosidad, diversión o porque la idea apareció de la nada.</p>
+                            <div class="project-list project-list--hobbie">
+                                <article class="project-card project-card--notbrainrot">
+                                    <div class="project-card-media" aria-hidden="true">
+                                        <img src="img/notbrainrot-jackpot-preview.png" width="1065" height="518" loading="lazy" decoding="async" alt="">
+                                    </div>
+                                    <div class="project-card-body">
+                                        <header class="project-card-header">
+                                            <span class="project-icon" aria-hidden="true"><i class="fa-solid fa-clover"></i></span>
+                                            <h3>NotBrainrot Jackpot</h3>
+                                        </header>
+                                        <p>Extensión para navegador que bloquea TikTok, X, Reddit, Instagram y Shorts durante los periodos de trabajo o estudio. El único escape es una máquina tragamonedas con cinco intentos por hora.</p>
+                                        <ul class="project-capabilities">
+                                            <li>Bloqueo programado de plataformas que interrumpen la concentración.</li>
+                                            <li>Cada premio desbloquea una cantidad limitada de minutos de acceso.</li>
+                                            <li>También se puede perder todo y seguir trabajando, como corresponde.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="project-card">
+                                    <div class="project-card-body">
+                                        <header class="project-card-header">
+                                            <span class="project-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+                                            <h3>MangaEnjoyer</h3>
+                                        </header>
+                                        <p>Proyecto para construir una biblioteca de acceso libre a mangas aportados por usuarios. Busca funcionar como alternativa a TMO y preservar obras cuyas traducciones ya desaparecieron o podrían desaparecer.</p>
+                                        <ul class="project-capabilities">
+                                            <li>Biblioteca comunitaria y de acceso abierto.</li>
+                                            <li>Aportes organizados por los propios usuarios.</li>
+                                            <li>Preservación de mangas y traducciones difíciles de encontrar.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="project-card">
+                                    <div class="project-card-body">
+                                        <header class="project-card-header">
+                                            <span class="project-icon" aria-hidden="true"><i class="fa-solid fa-dna"></i></span>
+                                            <h3>Revolite</h3>
+                                        </header>
+                                        <p>Roguelite progresivo centrado en evolucionar de manera constante y sin un límite definido, acumulando poder hasta consumir la totalidad de la existencia.</p>
+                                        <ul class="project-capabilities">
+                                            <li>Progresión continua entre partidas.</li>
+                                            <li>Evoluciones y combinaciones acumulativas.</li>
+                                            <li>Escala diseñada para crecer hasta niveles absurdos.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="project-card">
+                                    <div class="project-card-body">
+                                        <header class="project-card-header">
+                                            <span class="project-icon" aria-hidden="true"><i class="fa-solid fa-car-side"></i></span>
+                                            <h3>Please, Just Drive</h3>
+                                        </header>
+                                        <p>Juego de terror sobre seguir manejando a través de escenarios inquietantes y obstáculos impredecibles. El objetivo es llegar a destino junto a tu compañera.</p>
+                                        <ul class="project-capabilities">
+                                            <li>Conducción bajo presión y visibilidad limitada.</li>
+                                            <li>Escenarios de terror que cambian durante el trayecto.</li>
+                                            <li>Una meta sencilla: no detenerse y llegar juntos.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="post-more" id="hobbieProjectsMore" aria-hidden="true">
+                                <div class="project-more-note">
+                                    <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Y varios más en la galera.</strong>
+                                        <p>Más juegos, extensiones y experimentos irán apareciendo cuando estén listos para salir del cajón.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="post-expand-toggle" type="button" aria-expanded="false" aria-controls="hobbieProjectsMore">
+                                <span>Ver más</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="social-post" data-feed-category="services" data-profile-mode="hobbie" hidden>
+                    <div class="post-grid">
+                        <div class="post-avatar" aria-hidden="true"><img src="img/icon.jpg" width="238" height="238" loading="lazy" decoding="async" alt=""></div>
+                        <div class="post-content">
+                            <header class="post-head"><p class="post-author">Plxgio <span class="profile-handle">@plxgio</span></p></header>
+                            <h2 class="post-title">Servicios</h2>
+                            <p class="post-description">Cosas que puedo construir cuando el proyecto pide un enfoque más creativo, experimental o directamente hecho a medida.</p>
+                            <div class="service-grid" aria-label="Servicios del perfil Hobbie">
+                                <section class="service-card service-card--web">
+                                    <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+                                    <header class="service-window-bar">
+                                        <span class="service-window-dots" aria-hidden="true"></span>
+                                        <code>hobbie://software</code>
+                                    </header>
+                                    <div class="service-card-copy">
+                                        <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
+                                        <h3>Creación de software</h3>
+                                        <p>Desarrollo de utilidades, aplicaciones y herramientas personalizadas para ideas poco convencionales, prototipos o necesidades concretas.</p>
+                                    </div>
+                                </section>
+
+                                <section class="service-card service-card--tracking">
+                                    <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-cubes"></i></div>
+                                    <header class="service-window-bar">
+                                        <span class="service-window-dots" aria-hidden="true"></span>
+                                        <code>hobbie://assets</code>
+                                    </header>
+                                    <div class="service-card-copy">
+                                        <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
+                                        <h3>Creación de assets</h3>
+                                        <p>Producción de recursos 2D y 3D, interfaces, sprites y elementos visuales pensados para videojuegos, servidores o proyectos digitales.</p>
+                                    </div>
+                                </section>
+
+                                <section class="service-card service-card--custom service-card--wide">
+                                    <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-cube"></i></div>
+                                    <header class="service-window-bar">
+                                        <span class="service-window-dots" aria-hidden="true"></span>
+                                        <code>hobbie://minecraft-server</code>
+                                    </header>
+                                    <div class="service-card-copy">
+                                        <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-server"></i></span>
+                                        <h3>Desarrollo de servidores de Minecraft</h3>
+                                        <p>Diseño de servidores completos, configuración de infraestructura, mecánicas propias, plugins, mods, permisos y optimización para comunidades de distintos tamaños.</p>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="post-more" id="hobbieServicesMore" aria-hidden="true">
+                                <div class="service-grid service-grid--more" aria-label="Más servicios del perfil Hobbie">
+                                    <section class="service-card service-card--security">
+                                        <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-rocket"></i></div>
+                                        <header class="service-window-bar">
+                                            <span class="service-window-dots" aria-hidden="true"></span>
+                                            <code>hobbie://launcher</code>
+                                        </header>
+                                        <div class="service-card-copy">
+                                            <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-window-restore"></i></span>
+                                            <h3>Desarrollo de launchers personalizados</h3>
+                                            <p>Launchers con identidad propia, actualización automática, gestión de versiones, modpacks y acceso directo a servidores o experiencias específicas.</p>
+                                        </div>
+                                    </section>
+
+                                    <section class="service-card service-card--crypto">
+                                        <div class="service-card-art" aria-hidden="true"><i class="fa-solid fa-gamepad"></i></div>
+                                        <header class="service-window-bar">
+                                            <span class="service-window-dots" aria-hidden="true"></span>
+                                            <code>hobbie://gamedev</code>
+                                        </header>
+                                        <div class="service-card-copy">
+                                            <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-ghost"></i></span>
+                                            <h3>Desarrollo de videojuegos</h3>
+                                            <p>Creación de prototipos y juegos independientes, desde sistemas de gameplay y herramientas internas hasta integración de assets y optimización.</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <button class="post-expand-toggle" type="button" aria-expanded="false" aria-controls="hobbieServicesMore">
+                                <span>Ver más</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="social-post" data-feed-category="tools" data-profile-mode="hobbie" hidden>
+                    <div class="post-grid">
+                        <div class="post-avatar" aria-hidden="true"><img src="img/icon.jpg" width="238" height="238" loading="lazy" decoding="async" alt=""></div>
+                        <div class="post-content">
+                            <header class="post-head"><p class="post-author">Plxgio <span class="profile-handle">@plxgio</span></p></header>
+                            <h2 class="post-title">Herramientas &amp; stack</h2>
+                            <p class="post-description">Motores, lenguajes visuales y herramientas creativas que utilizo para experimentar con juegos, gráficos y assets.</p>
+                            <div class="tool-catalog tool-catalog--hobbie">
+                                <section class="tool-group" aria-labelledby="hobbieLanguagesTitle">
+                                    <header class="tool-group-header">
+                                        <span aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+                                        <h3 id="hobbieLanguagesTitle">Lenguajes creativos</h3>
+                                    </header>
+                                    <div class="tool-plates">
+                                        <div class="tool-plate" data-mark="GD" style="--tool-color: #478cbf;"><i class="devicon-godot-plain" aria-hidden="true"></i><strong>GDScript</strong></div>
+                                        <div class="tool-plate" data-mark="GL" style="--tool-color: #ff3c55;"><i class="fa-solid fa-shapes" aria-hidden="true"></i><strong>GLSL</strong></div>
+                                    </div>
+                                </section>
+
+                                <section class="tool-group" aria-labelledby="hobbieEnginesTitle">
+                                    <header class="tool-group-header">
+                                        <span aria-hidden="true"><i class="fa-solid fa-gamepad"></i></span>
+                                        <h3 id="hobbieEnginesTitle">Motores y visuales</h3>
+                                    </header>
+                                    <div class="tool-plates">
+                                        <div class="tool-plate" data-mark="UN" style="--tool-color: #e6edf3;"><i class="devicon-unity-plain" aria-hidden="true"></i><strong>Unity</strong></div>
+                                        <div class="tool-plate" data-mark="GO" style="--tool-color: #478cbf;"><i class="devicon-godot-plain" aria-hidden="true"></i><strong>Godot</strong></div>
+                                        <div class="tool-plate" data-mark="3D" style="--tool-color: #e6edf3;"><i class="devicon-threejs-original" aria-hidden="true"></i><strong>Three.js</strong></div>
+                                    </div>
+                                </section>
+
+                                <section class="tool-group" aria-labelledby="hobbieAssetsTitle">
+                                    <header class="tool-group-header">
+                                        <span aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
+                                        <h3 id="hobbieAssetsTitle">Producción de assets</h3>
+                                    </header>
+                                    <div class="tool-plates">
+                                        <div class="tool-plate" data-mark="BL" style="--tool-color: #f5792a;"><i class="devicon-blender-original" aria-hidden="true"></i><strong>Blender</strong></div>
+                                        <div class="tool-plate" data-mark="AS" style="--tool-color: #7ad7ff;"><i class="fa-solid fa-paintbrush" aria-hidden="true"></i><strong>Aseprite</strong></div>
+                                    </div>
+                                </section>
+
+                                <section class="tool-group" aria-labelledby="hobbieMinecraftToolsTitle">
+                                    <header class="tool-group-header">
+                                        <span aria-hidden="true"><i class="fa-solid fa-cubes-stacked"></i></span>
+                                        <h3 id="hobbieMinecraftToolsTitle">Mods, plugins y servidores</h3>
+                                    </header>
+                                    <div class="tool-plates">
+                                        <div class="tool-plate" data-mark="JV" style="--tool-color: #f89820;"><i class="devicon-java-plain" aria-hidden="true"></i><strong>Java</strong></div>
+                                        <div class="tool-plate" data-mark="KT" style="--tool-color: #a97bff;"><i class="devicon-kotlin-plain" aria-hidden="true"></i><strong>Kotlin</strong></div>
+                                        <div class="tool-plate" data-mark="GR" style="--tool-color: #23a6a8;"><i class="devicon-gradle-original" aria-hidden="true"></i><strong>Gradle</strong></div>
+                                        <div class="tool-plate" data-mark="MV" style="--tool-color: #c71a36;"><i class="devicon-maven-plain" aria-hidden="true"></i><strong>Maven</strong></div>
+                                        <div class="tool-plate" data-mark="IJ" style="--tool-color: #ff3c55;"><i class="devicon-intellij-plain" aria-hidden="true"></i><strong>IntelliJ IDEA</strong></div>
+                                        <div class="tool-plate" data-mark="PA" style="--tool-color: #f1f4ee;"><i class="fa-solid fa-scroll" aria-hidden="true"></i><strong>Paper</strong></div>
+                                        <div class="tool-plate" data-mark="SP" style="--tool-color: #fcee0a;"><i class="fa-solid fa-plug" aria-hidden="true"></i><strong>Spigot</strong></div>
+                                        <div class="tool-plate" data-mark="FA" style="--tool-color: #dbd4c8;"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><strong>Fabric</strong></div>
+                                        <div class="tool-plate" data-mark="FO" style="--tool-color: #ff6a3d;"><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i><strong>Forge</strong></div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="social-post" data-feed-category="learning" data-profile-mode="hobbie" hidden>
+                    <div class="post-grid">
+                        <div class="post-avatar" aria-hidden="true"><img src="img/icon.jpg" width="238" height="238" loading="lazy" decoding="async" alt=""></div>
+                        <div class="post-content">
+                            <header class="post-head"><p class="post-author">Plxgio <span class="profile-handle">@plxgio</span></p></header>
+                            <h2 class="post-title">Learning</h2>
+                            <p class="post-description">Objetivo actual: entender y construir las piezas necesarias para desarrollar un motor gráfico propio.</p>
+                            <section class="engine-lab" aria-labelledby="engineLabTitle">
+                                <header class="engine-lab-header">
+                                    <span aria-hidden="true"><i class="fa-solid fa-gears"></i></span>
+                                    <div>
+                                        <h3 id="engineLabTitle">Motor gráfico propio</h3>
+                                        <p>Ruta experimental desde una ventana vacía hasta un renderer con escenas, assets y herramientas de diagnóstico.</p>
+                                    </div>
+                                </header>
+
+                                <ol class="engine-roadmap">
+                                    <li class="engine-step">
+                                        <span class="engine-step-number">01</span>
+                                        <div>
+                                            <h4>Fundaciones</h4>
+                                            <p>Memoria, estructuras, vectores, matrices y una arquitectura mínima que pueda crecer sin romperse.</p>
+                                            <div class="engine-step-tools"><span>C++ / Rust</span><span>CMake</span><span>Math</span></div>
+                                        </div>
+                                    </li>
+                                    <li class="engine-step">
+                                        <span class="engine-step-number">02</span>
+                                        <div>
+                                            <h4>Ventana e input</h4>
+                                            <p>Creación de la ventana, ciclo principal, teclado, mouse, tiempo y eventos del sistema.</p>
+                                            <div class="engine-step-tools"><span>SDL</span><span>GLFW</span><span>Game loop</span></div>
+                                        </div>
+                                    </li>
+                                    <li class="engine-step">
+                                        <span class="engine-step-number">03</span>
+                                        <div>
+                                            <h4>Renderer</h4>
+                                            <p>Pipeline de dibujo, buffers, cámaras y primeras geometrías renderizadas en tiempo real.</p>
+                                            <div class="engine-step-tools"><span>OpenGL</span><span>Vulkan</span><span>Buffers</span></div>
+                                        </div>
+                                    </li>
+                                    <li class="engine-step">
+                                        <span class="engine-step-number">04</span>
+                                        <div>
+                                            <h4>Shaders y materiales</h4>
+                                            <p>Iluminación, texturas, materiales y efectos programados directamente sobre la GPU.</p>
+                                            <div class="engine-step-tools"><span>GLSL</span><span>PBR</span><span>GPU</span></div>
+                                        </div>
+                                    </li>
+                                    <li class="engine-step">
+                                        <span class="engine-step-number">05</span>
+                                        <div>
+                                            <h4>Escenas y assets</h4>
+                                            <p>Carga de modelos, texturas, jerarquías, entidades y organización de una escena completa.</p>
+                                            <div class="engine-step-tools"><span>ECS</span><span>Meshes</span><span>Asset pipeline</span></div>
+                                        </div>
+                                    </li>
+                                    <li class="engine-step">
+                                        <span class="engine-step-number">06</span>
+                                        <div>
+                                            <h4>Optimización y tooling</h4>
+                                            <p>Profiling, depuración visual y herramientas propias para inspeccionar el motor mientras funciona.</p>
+                                            <div class="engine-step-tools"><span>Profiling</span><span>Debug UI</span><span>Editor</span></div>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+                    </section>
+                </div>
+            </div>
+
+            <footer class="site-signature">plxgio <span>|</span> 2026</footer>
+        </main>
+    </div>
+
+    <dialog class="profile-dialog" id="profileDialog" aria-labelledby="profileDialogTitle" aria-describedby="profileDialogDescription">
+        <div class="profile-dialog-inner">
+            <button class="profile-dialog-close" id="profileDialogClose" type="button" aria-label="Cerrar imagen ampliada">×</button>
+            <img id="profileDialogImage" src="img/main-profile.png" width="703" height="656" loading="lazy" decoding="async" alt="Logo personal ampliado de Plxgio">
+            <div class="profile-dialog-copy">
+                <small>Identity / logo</small>
+                <h2 id="profileDialogTitle">Logo personal</h2>
+                <p id="profileDialogDescription">Mi logo personal simula la estructura craneal de un perro, con una “x” en el medio por ser mi letra preferida y la que utilizo en mi nombre.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
